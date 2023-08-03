@@ -61,7 +61,7 @@ We need to write a program in HDL language (Quartus II) to control 2 servo drive
 
 *Figure 9 - There is pulse LS=1 for 1 period.*
 
-# Simulation results for 2 servo
+# Simulation results for 2 servos
 
 ![Figure 10 - Block diagrams.](https://github.com/Hoai-Baoo/CNC_pulse_gen/assets/93426264/42c6b7d3-7dd4-4e0f-9a35-91c53e4e9c77)
 
