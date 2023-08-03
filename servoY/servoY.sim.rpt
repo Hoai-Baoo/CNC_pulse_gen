@@ -1,0 +1,444 @@
+Simulator report for servoY
+Sun Oct 30 13:22:11 2022
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------+
+; Simulator Summary                           ;
++-----------------------------+---------------+
+; Type                        ; Value         ;
++-----------------------------+---------------+
+; Simulation Start Time       ; 0 ps          ;
+; Simulation End Time         ; 10.0 ms       ;
+; Simulation Netlist Size     ; 183 nodes     ;
+; Simulation Coverage         ;      65.70 %  ;
+; Total Number of Transitions ; 141447        ;
+; Simulation Breakpoints      ; 0             ;
+; Family                      ; MAX II        ;
+; Device                      ; EPM1270T144C5 ;
++-----------------------------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      65.70 % ;
+; Total nodes checked                                 ; 183          ;
+; Total output ports checked                          ; 207          ;
+; Total output ports with complete 1/0-value coverage ; 136          ;
+; Total output ports with no 1/0-value coverage       ; 71           ;
+; Total output ports with no 1-value coverage         ; 71           ;
+; Total output ports with no 0-value coverage         ; 71           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++---------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                               ;
++-------------------------+------------------------------+------------------+
+; Node Name               ; Output Port Name             ; Output Port Type ;
++-------------------------+------------------------------+------------------+
+; |servoY|pinout          ; |servoY|Pulse~0              ; combout          ;
+; |servoY|flag_full~reg0  ; |servoY|flag_full~reg0       ; regout           ;
+; |servoY|countWR[1]~reg0 ; |servoY|countWR[1]~reg0      ; regout           ;
+; |servoY|countWR[2]~reg0 ; |servoY|countWR[2]~reg0      ; regout           ;
+; |servoY|LessThan1~0     ; |servoY|LessThan1~0          ; combout          ;
+; |servoY|Add0~0          ; |servoY|Add0~0               ; combout          ;
+; |servoY|Add0~0          ; |servoY|Add0~2               ; cout0            ;
+; |servoY|Add0~0          ; |servoY|Add0~2COUT1_50       ; cout1            ;
+; |servoY|Add0~5          ; |servoY|Add0~5               ; combout          ;
+; |servoY|Add0~5          ; |servoY|Add0~7               ; cout             ;
+; |servoY|Add0~10         ; |servoY|Add0~10              ; combout          ;
+; |servoY|Add0~10         ; |servoY|Add0~12              ; cout0            ;
+; |servoY|Add0~10         ; |servoY|Add0~12COUT1_52      ; cout1            ;
+; |servoY|Add0~15         ; |servoY|Add0~15              ; combout          ;
+; |servoY|Add0~15         ; |servoY|Add0~17COUT1_58      ; cout1            ;
+; |servoY|Equal1~0        ; |servoY|Equal1~0             ; combout          ;
+; |servoY|Add0~20         ; |servoY|Add0~20              ; combout          ;
+; |servoY|Add0~20         ; |servoY|Add0~22COUT1_56      ; cout1            ;
+; |servoY|Add0~25         ; |servoY|Add0~25              ; combout          ;
+; |servoY|Add0~25         ; |servoY|Add0~27              ; cout0            ;
+; |servoY|Add0~25         ; |servoY|Add0~27COUT1_48      ; cout1            ;
+; |servoY|Add0~30         ; |servoY|Add0~30              ; combout          ;
+; |servoY|Add0~30         ; |servoY|Add0~32              ; cout0            ;
+; |servoY|Add0~30         ; |servoY|Add0~32COUT1_54      ; cout1            ;
+; |servoY|Add0~35         ; |servoY|Add0~35              ; combout          ;
+; |servoY|Equal0~0        ; |servoY|Equal0~0             ; combout          ;
+; |servoY|Equal1~1        ; |servoY|Equal1~1             ; combout          ;
+; |servoY|Equal0~1        ; |servoY|Equal0~1             ; combout          ;
+; |servoY|BUFF1[7]        ; |servoY|BUFF1[7]             ; regout           ;
+; |servoY|countT[2]       ; |servoY|countT[2]            ; regout           ;
+; |servoY|countT[1]       ; |servoY|countT[1]            ; regout           ;
+; |servoY|Equal2~0        ; |servoY|Equal2~0             ; combout          ;
+; |servoY|Dir~0           ; |servoY|Dir~0                ; combout          ;
+; |servoY|LessThan0~0     ; |servoY|LessThan0~0          ; combout          ;
+; |servoY|countWR~0       ; |servoY|countWR~0            ; combout          ;
+; |servoY|Add5~0          ; |servoY|Add5~0               ; combout          ;
+; |servoY|countWR~1       ; |servoY|countWR~1            ; combout          ;
+; |servoY|preWR           ; |servoY|always0~0            ; combout          ;
+; |servoY|preflag_T       ; |servoY|preflag_T            ; regout           ;
+; |servoY|always0~1       ; |servoY|always0~1            ; combout          ;
+; |servoY|countWR~5       ; |servoY|countWR~5            ; combout          ;
+; |servoY|countWR~6       ; |servoY|countWR~6            ; combout          ;
+; |servoY|count_clk1[1]   ; |servoY|count_clk1[1]        ; regout           ;
+; |servoY|count_clk1[4]   ; |servoY|count_clk1[4]        ; regout           ;
+; |servoY|count_clk1[2]   ; |servoY|count_clk1[2]        ; regout           ;
+; |servoY|count_clk1[6]   ; |servoY|count_clk1[6]        ; regout           ;
+; |servoY|count_clk1[5]   ; |servoY|count_clk1[5]        ; regout           ;
+; |servoY|count_clk1[0]   ; |servoY|count_clk1[0]        ; regout           ;
+; |servoY|count_clk1[3]   ; |servoY|count_clk1[3]        ; regout           ;
+; |servoY|BUFF3~0         ; |servoY|BUFF3~0              ; combout          ;
+; |servoY|BUFF1~0         ; |servoY|BUFF1~0              ; combout          ;
+; |servoY|BUFF2[7]        ; |servoY|BUFF2[7]             ; regout           ;
+; |servoY|BUFF1~1         ; |servoY|BUFF1~1              ; combout          ;
+; |servoY|BUFF2~0         ; |servoY|BUFF2~0              ; combout          ;
+; |servoY|BUFF2~1         ; |servoY|BUFF2~1              ; combout          ;
+; |servoY|Add4~0          ; |servoY|Add4~0               ; combout          ;
+; |servoY|LessThan1~17    ; |servoY|LessThan1~17         ; cout             ;
+; |servoY|BUFF3~1         ; |servoY|BUFF3~1              ; combout          ;
+; |servoY|Add4~6          ; |servoY|Add4~6               ; combout          ;
+; |servoY|Ny_temp[1]~2    ; |servoY|Ny_temp[1]~2         ; combout          ;
+; |servoY|Add3~15         ; |servoY|Add3~15              ; combout          ;
+; |servoY|LessThan1~22    ; |servoY|LessThan1~22         ; cout0            ;
+; |servoY|LessThan1~22    ; |servoY|LessThan1~22COUT1_54 ; cout1            ;
+; |servoY|BUFF4~0         ; |servoY|BUFF4~0              ; combout          ;
+; |servoY|BUFF4~1         ; |servoY|BUFF4~1              ; combout          ;
+; |servoY|BUFF4~2         ; |servoY|BUFF4~2              ; combout          ;
+; |servoY|Add4~12         ; |servoY|Add4~12              ; combout          ;
+; |servoY|Add3~20         ; |servoY|Add3~20              ; combout          ;
+; |servoY|Add3~20         ; |servoY|Add3~22              ; cout0            ;
+; |servoY|Add3~20         ; |servoY|Add3~22COUT1_54      ; cout1            ;
+; |servoY|LessThan1~27    ; |servoY|LessThan1~27         ; cout0            ;
+; |servoY|LessThan1~27    ; |servoY|LessThan1~27COUT1_52 ; cout1            ;
+; |servoY|Add4~18         ; |servoY|Add4~18              ; combout          ;
+; |servoY|Add4~18         ; |servoY|Add4~20              ; cout             ;
+; |servoY|acc[3]          ; |servoY|acc[3]               ; regout           ;
+; |servoY|Add3~25         ; |servoY|Add3~25              ; combout          ;
+; |servoY|Add3~25         ; |servoY|Add3~27              ; cout0            ;
+; |servoY|Add3~25         ; |servoY|Add3~27COUT1_52      ; cout1            ;
+; |servoY|LessThan1~32    ; |servoY|LessThan1~32         ; cout0            ;
+; |servoY|LessThan1~32    ; |servoY|LessThan1~32COUT1_50 ; cout1            ;
+; |servoY|Add4~24         ; |servoY|Add4~24              ; combout          ;
+; |servoY|Add4~24         ; |servoY|Add4~26              ; cout0            ;
+; |servoY|Add4~24         ; |servoY|Add4~26COUT1_62      ; cout1            ;
+; |servoY|BUFF1[2]        ; |servoY|BUFF1[2]             ; regout           ;
+; |servoY|Ny_temp~9       ; |servoY|Ny_temp~9            ; combout          ;
+; |servoY|acc[2]          ; |servoY|acc[2]               ; regout           ;
+; |servoY|Add3~30         ; |servoY|Add3~30              ; combout          ;
+; |servoY|Add3~30         ; |servoY|Add3~32              ; cout0            ;
+; |servoY|Add3~30         ; |servoY|Add3~32COUT1_50      ; cout1            ;
+; |servoY|LessThan1~37    ; |servoY|LessThan1~37         ; cout0            ;
+; |servoY|LessThan1~37    ; |servoY|LessThan1~37COUT1_48 ; cout1            ;
+; |servoY|Add4~30         ; |servoY|Add4~30              ; combout          ;
+; |servoY|Add4~30         ; |servoY|Add4~32              ; cout0            ;
+; |servoY|Add4~30         ; |servoY|Add4~32COUT1_60      ; cout1            ;
+; |servoY|BUFF2[2]        ; |servoY|BUFF2[2]             ; regout           ;
+; |servoY|BUFF1~11        ; |servoY|BUFF1~11             ; combout          ;
+; |servoY|BUFF1[1]        ; |servoY|BUFF1[1]             ; regout           ;
+; |servoY|Ny_temp~11      ; |servoY|Ny_temp~11           ; combout          ;
+; |servoY|acc[1]          ; |servoY|acc[1]               ; regout           ;
+; |servoY|Add3~35         ; |servoY|Add3~35              ; combout          ;
+; |servoY|Add3~35         ; |servoY|Add3~37              ; cout0            ;
+; |servoY|Add3~35         ; |servoY|Add3~37COUT1_48      ; cout1            ;
+; |servoY|Add4~36         ; |servoY|Add4~36              ; combout          ;
+; |servoY|Add4~36         ; |servoY|Add4~38              ; cout0            ;
+; |servoY|Add4~36         ; |servoY|Add4~38COUT1_58      ; cout1            ;
+; |servoY|BUFF3[2]        ; |servoY|BUFF3[2]             ; regout           ;
+; |servoY|BUFF2~11        ; |servoY|BUFF2~11             ; combout          ;
+; |servoY|BUFF2[1]        ; |servoY|BUFF2[1]             ; regout           ;
+; |servoY|BUFF1~13        ; |servoY|BUFF1~13             ; combout          ;
+; |servoY|BUFF1[0]        ; |servoY|BUFF1[0]             ; regout           ;
+; |servoY|Ny_temp~13      ; |servoY|Ny_temp~13           ; combout          ;
+; |servoY|acc[0]          ; |servoY|acc[0]               ; regout           ;
+; |servoY|Add4~42         ; |servoY|Add4~42              ; combout          ;
+; |servoY|BUFF3~12        ; |servoY|BUFF3~12             ; combout          ;
+; |servoY|BUFF3[1]        ; |servoY|BUFF3[1]             ; regout           ;
+; |servoY|BUFF2~13        ; |servoY|BUFF2~13             ; combout          ;
+; |servoY|BUFF2[0]        ; |servoY|BUFF2[0]             ; regout           ;
+; |servoY|BUFF1~15        ; |servoY|BUFF1~15             ; combout          ;
+; |servoY|BUFF3~14        ; |servoY|BUFF3~14             ; combout          ;
+; |servoY|BUFF3[0]        ; |servoY|BUFF3[0]             ; regout           ;
+; |servoY|BUFF2~15        ; |servoY|BUFF2~15             ; combout          ;
+; |servoY|BUFF3~16        ; |servoY|BUFF3~16             ; combout          ;
+; |servoY|clk             ; |servoY|clk~corein           ; combout          ;
+; |servoY|WR              ; |servoY|WR~corein            ; combout          ;
+; |servoY|Ny[7]           ; |servoY|Ny[7]~corein         ; combout          ;
+; |servoY|Ny[3]           ; |servoY|Ny[3]~corein         ; combout          ;
+; |servoY|Ny[2]           ; |servoY|Ny[2]~corein         ; combout          ;
+; |servoY|Ny[1]           ; |servoY|Ny[1]~corein         ; combout          ;
+; |servoY|Ny[0]           ; |servoY|Ny[0]~corein         ; combout          ;
+; |servoY|Pulse           ; |servoY|Pulse                ; padio            ;
+; |servoY|Dir             ; |servoY|Dir                  ; padio            ;
+; |servoY|flag_T          ; |servoY|flag_T               ; padio            ;
+; |servoY|flag_full       ; |servoY|flag_full            ; padio            ;
+; |servoY|countWR[0]      ; |servoY|countWR[0]           ; padio            ;
+; |servoY|countWR[1]      ; |servoY|countWR[1]           ; padio            ;
+; |servoY|countWR[2]      ; |servoY|countWR[2]           ; padio            ;
++-------------------------+------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++---------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                  ;
++-------------------------+------------------------------+------------------+
+; Node Name               ; Output Port Name             ; Output Port Type ;
++-------------------------+------------------------------+------------------+
+; |servoY|countWR[3]~reg0 ; |servoY|countWR[3]~reg0      ; regout           ;
+; |servoY|Add0~15         ; |servoY|Add0~17              ; cout0            ;
+; |servoY|Add0~20         ; |servoY|Add0~22              ; cout0            ;
+; |servoY|countWR~2       ; |servoY|countWR~2            ; combout          ;
+; |servoY|countWR~3       ; |servoY|countWR~3            ; combout          ;
+; |servoY|Add3~0          ; |servoY|Add3~0               ; combout          ;
+; |servoY|LessThan1~7     ; |servoY|LessThan1~7          ; cout0            ;
+; |servoY|LessThan1~7     ; |servoY|LessThan1~7COUT1_58  ; cout1            ;
+; |servoY|count_clk1[7]   ; |servoY|count_clk1[7]        ; regout           ;
+; |servoY|acc[7]          ; |servoY|acc[7]               ; regout           ;
+; |servoY|Add3~5          ; |servoY|Add3~5               ; combout          ;
+; |servoY|Add3~5          ; |servoY|Add3~7               ; cout0            ;
+; |servoY|Add3~5          ; |servoY|Add3~7COUT1_58       ; cout1            ;
+; |servoY|LessThan1~12    ; |servoY|LessThan1~12         ; cout0            ;
+; |servoY|LessThan1~12    ; |servoY|LessThan1~12COUT1_56 ; cout1            ;
+; |servoY|BUFF3[7]        ; |servoY|BUFF3[7]             ; regout           ;
+; |servoY|BUFF1[6]        ; |servoY|BUFF1[6]             ; regout           ;
+; |servoY|Ny_temp~0       ; |servoY|Ny_temp~0            ; combout          ;
+; |servoY|acc[6]          ; |servoY|acc[6]               ; regout           ;
+; |servoY|Add3~10         ; |servoY|Add3~10              ; combout          ;
+; |servoY|Add3~10         ; |servoY|Add3~12              ; cout0            ;
+; |servoY|Add3~10         ; |servoY|Add3~12COUT1_56      ; cout1            ;
+; |servoY|BUFF3~2         ; |servoY|BUFF3~2              ; combout          ;
+; |servoY|Add4~6          ; |servoY|Add4~8               ; cout0            ;
+; |servoY|Add4~6          ; |servoY|Add4~8COUT1_66       ; cout1            ;
+; |servoY|BUFF2[6]        ; |servoY|BUFF2[6]             ; regout           ;
+; |servoY|BUFF1~3         ; |servoY|BUFF1~3              ; combout          ;
+; |servoY|BUFF1[5]        ; |servoY|BUFF1[5]             ; regout           ;
+; |servoY|Ny_temp~3       ; |servoY|Ny_temp~3            ; combout          ;
+; |servoY|acc[5]          ; |servoY|acc[5]               ; regout           ;
+; |servoY|Add3~15         ; |servoY|Add3~17              ; cout             ;
+; |servoY|Add4~12         ; |servoY|Add4~14              ; cout0            ;
+; |servoY|Add4~12         ; |servoY|Add4~14COUT1_64      ; cout1            ;
+; |servoY|BUFF3[6]        ; |servoY|BUFF3[6]             ; regout           ;
+; |servoY|BUFF2~3         ; |servoY|BUFF2~3              ; combout          ;
+; |servoY|BUFF2[5]        ; |servoY|BUFF2[5]             ; regout           ;
+; |servoY|BUFF1~5         ; |servoY|BUFF1~5              ; combout          ;
+; |servoY|BUFF1[4]        ; |servoY|BUFF1[4]             ; regout           ;
+; |servoY|Ny_temp~5       ; |servoY|Ny_temp~5            ; combout          ;
+; |servoY|acc[4]          ; |servoY|acc[4]               ; regout           ;
+; |servoY|BUFF3~4         ; |servoY|BUFF3~4              ; combout          ;
+; |servoY|BUFF3[5]        ; |servoY|BUFF3[5]             ; regout           ;
+; |servoY|BUFF2~5         ; |servoY|BUFF2~5              ; combout          ;
+; |servoY|BUFF2[4]        ; |servoY|BUFF2[4]             ; regout           ;
+; |servoY|BUFF1~7         ; |servoY|BUFF1~7              ; combout          ;
+; |servoY|BUFF1[3]        ; |servoY|BUFF1[3]             ; regout           ;
+; |servoY|Ny_temp~7       ; |servoY|Ny_temp~7            ; combout          ;
+; |servoY|BUFF3~6         ; |servoY|BUFF3~6              ; combout          ;
+; |servoY|BUFF3[4]        ; |servoY|BUFF3[4]             ; regout           ;
+; |servoY|BUFF2~7         ; |servoY|BUFF2~7              ; combout          ;
+; |servoY|BUFF2[3]        ; |servoY|BUFF2[3]             ; regout           ;
+; |servoY|BUFF1~9         ; |servoY|BUFF1~9              ; combout          ;
+; |servoY|BUFF3~8         ; |servoY|BUFF3~8              ; combout          ;
+; |servoY|BUFF3[3]        ; |servoY|BUFF3[3]             ; regout           ;
+; |servoY|BUFF2~9         ; |servoY|BUFF2~9              ; combout          ;
+; |servoY|BUFF3~10        ; |servoY|BUFF3~10             ; combout          ;
+; |servoY|Add4~42         ; |servoY|Add4~44              ; cout0            ;
+; |servoY|Add4~42         ; |servoY|Add4~44COUT1_56      ; cout1            ;
+; |servoY|LS              ; |servoY|LS~corein            ; combout          ;
+; |servoY|N[7]            ; |servoY|N[7]~corein          ; combout          ;
+; |servoY|N[6]            ; |servoY|N[6]~corein          ; combout          ;
+; |servoY|N[5]            ; |servoY|N[5]~corein          ; combout          ;
+; |servoY|Ny[6]           ; |servoY|Ny[6]~corein         ; combout          ;
+; |servoY|N[4]            ; |servoY|N[4]~corein          ; combout          ;
+; |servoY|Ny[5]           ; |servoY|Ny[5]~corein         ; combout          ;
+; |servoY|N[3]            ; |servoY|N[3]~corein          ; combout          ;
+; |servoY|Ny[4]           ; |servoY|Ny[4]~corein         ; combout          ;
+; |servoY|N[2]            ; |servoY|N[2]~corein          ; combout          ;
+; |servoY|N[1]            ; |servoY|N[1]~corein          ; combout          ;
+; |servoY|N[0]            ; |servoY|N[0]~corein          ; combout          ;
+; |servoY|countWR[3]      ; |servoY|countWR[3]           ; padio            ;
++-------------------------+------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++---------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                  ;
++-------------------------+------------------------------+------------------+
+; Node Name               ; Output Port Name             ; Output Port Type ;
++-------------------------+------------------------------+------------------+
+; |servoY|countWR[3]~reg0 ; |servoY|countWR[3]~reg0      ; regout           ;
+; |servoY|Add0~15         ; |servoY|Add0~17              ; cout0            ;
+; |servoY|Add0~20         ; |servoY|Add0~22              ; cout0            ;
+; |servoY|countWR~2       ; |servoY|countWR~2            ; combout          ;
+; |servoY|countWR~3       ; |servoY|countWR~3            ; combout          ;
+; |servoY|Add3~0          ; |servoY|Add3~0               ; combout          ;
+; |servoY|LessThan1~7     ; |servoY|LessThan1~7          ; cout0            ;
+; |servoY|LessThan1~7     ; |servoY|LessThan1~7COUT1_58  ; cout1            ;
+; |servoY|count_clk1[7]   ; |servoY|count_clk1[7]        ; regout           ;
+; |servoY|acc[7]          ; |servoY|acc[7]               ; regout           ;
+; |servoY|Add3~5          ; |servoY|Add3~5               ; combout          ;
+; |servoY|Add3~5          ; |servoY|Add3~7               ; cout0            ;
+; |servoY|Add3~5          ; |servoY|Add3~7COUT1_58       ; cout1            ;
+; |servoY|LessThan1~12    ; |servoY|LessThan1~12         ; cout0            ;
+; |servoY|LessThan1~12    ; |servoY|LessThan1~12COUT1_56 ; cout1            ;
+; |servoY|BUFF3[7]        ; |servoY|BUFF3[7]             ; regout           ;
+; |servoY|BUFF1[6]        ; |servoY|BUFF1[6]             ; regout           ;
+; |servoY|Ny_temp~0       ; |servoY|Ny_temp~0            ; combout          ;
+; |servoY|acc[6]          ; |servoY|acc[6]               ; regout           ;
+; |servoY|Add3~10         ; |servoY|Add3~10              ; combout          ;
+; |servoY|Add3~10         ; |servoY|Add3~12              ; cout0            ;
+; |servoY|Add3~10         ; |servoY|Add3~12COUT1_56      ; cout1            ;
+; |servoY|BUFF3~2         ; |servoY|BUFF3~2              ; combout          ;
+; |servoY|Add4~6          ; |servoY|Add4~8               ; cout0            ;
+; |servoY|Add4~6          ; |servoY|Add4~8COUT1_66       ; cout1            ;
+; |servoY|BUFF2[6]        ; |servoY|BUFF2[6]             ; regout           ;
+; |servoY|BUFF1~3         ; |servoY|BUFF1~3              ; combout          ;
+; |servoY|BUFF1[5]        ; |servoY|BUFF1[5]             ; regout           ;
+; |servoY|Ny_temp~3       ; |servoY|Ny_temp~3            ; combout          ;
+; |servoY|acc[5]          ; |servoY|acc[5]               ; regout           ;
+; |servoY|Add3~15         ; |servoY|Add3~17              ; cout             ;
+; |servoY|Add4~12         ; |servoY|Add4~14              ; cout0            ;
+; |servoY|Add4~12         ; |servoY|Add4~14COUT1_64      ; cout1            ;
+; |servoY|BUFF3[6]        ; |servoY|BUFF3[6]             ; regout           ;
+; |servoY|BUFF2~3         ; |servoY|BUFF2~3              ; combout          ;
+; |servoY|BUFF2[5]        ; |servoY|BUFF2[5]             ; regout           ;
+; |servoY|BUFF1~5         ; |servoY|BUFF1~5              ; combout          ;
+; |servoY|BUFF1[4]        ; |servoY|BUFF1[4]             ; regout           ;
+; |servoY|Ny_temp~5       ; |servoY|Ny_temp~5            ; combout          ;
+; |servoY|acc[4]          ; |servoY|acc[4]               ; regout           ;
+; |servoY|BUFF3~4         ; |servoY|BUFF3~4              ; combout          ;
+; |servoY|BUFF3[5]        ; |servoY|BUFF3[5]             ; regout           ;
+; |servoY|BUFF2~5         ; |servoY|BUFF2~5              ; combout          ;
+; |servoY|BUFF2[4]        ; |servoY|BUFF2[4]             ; regout           ;
+; |servoY|BUFF1~7         ; |servoY|BUFF1~7              ; combout          ;
+; |servoY|BUFF1[3]        ; |servoY|BUFF1[3]             ; regout           ;
+; |servoY|Ny_temp~7       ; |servoY|Ny_temp~7            ; combout          ;
+; |servoY|BUFF3~6         ; |servoY|BUFF3~6              ; combout          ;
+; |servoY|BUFF3[4]        ; |servoY|BUFF3[4]             ; regout           ;
+; |servoY|BUFF2~7         ; |servoY|BUFF2~7              ; combout          ;
+; |servoY|BUFF2[3]        ; |servoY|BUFF2[3]             ; regout           ;
+; |servoY|BUFF1~9         ; |servoY|BUFF1~9              ; combout          ;
+; |servoY|BUFF3~8         ; |servoY|BUFF3~8              ; combout          ;
+; |servoY|BUFF3[3]        ; |servoY|BUFF3[3]             ; regout           ;
+; |servoY|BUFF2~9         ; |servoY|BUFF2~9              ; combout          ;
+; |servoY|BUFF3~10        ; |servoY|BUFF3~10             ; combout          ;
+; |servoY|Add4~42         ; |servoY|Add4~44              ; cout0            ;
+; |servoY|Add4~42         ; |servoY|Add4~44COUT1_56      ; cout1            ;
+; |servoY|LS              ; |servoY|LS~corein            ; combout          ;
+; |servoY|N[7]            ; |servoY|N[7]~corein          ; combout          ;
+; |servoY|N[6]            ; |servoY|N[6]~corein          ; combout          ;
+; |servoY|N[5]            ; |servoY|N[5]~corein          ; combout          ;
+; |servoY|Ny[6]           ; |servoY|Ny[6]~corein         ; combout          ;
+; |servoY|N[4]            ; |servoY|N[4]~corein          ; combout          ;
+; |servoY|Ny[5]           ; |servoY|Ny[5]~corein         ; combout          ;
+; |servoY|N[3]            ; |servoY|N[3]~corein          ; combout          ;
+; |servoY|Ny[4]           ; |servoY|Ny[4]~corein         ; combout          ;
+; |servoY|N[2]            ; |servoY|N[2]~corein          ; combout          ;
+; |servoY|N[1]            ; |servoY|N[1]~corein          ; combout          ;
+; |servoY|N[0]            ; |servoY|N[0]~corein          ; combout          ;
+; |servoY|countWR[3]      ; |servoY|countWR[3]           ; padio            ;
++-------------------------+------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sun Oct 30 13:22:09 2022
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off servoY -c servoY
+Info: Using vector source file "C:/Users/DELL/Desktop/Bach_Khoa/HeThongDieuKhienNhung/CNC_PulseGen_Nhom08/servoY/servoY.vwf"
+Info: Inverted registers were found during simulation
+    Info: Register: |servoY|clk1
+    Info: Register: |servoY|flag_T~reg0
+    Info: Register: |servoY|acc[3]
+    Info: Register: |servoY|acc[1]
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      65.70 %
+Info: Number of transitions in simulation is 141447
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 157 megabytes
+    Info: Processing ended: Sun Oct 30 13:22:11 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

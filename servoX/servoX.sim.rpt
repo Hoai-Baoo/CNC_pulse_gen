@@ -1,0 +1,437 @@
+Simulator report for servoX
+Sun Oct 30 13:30:36 2022
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------+
+; Simulator Summary                           ;
++-----------------------------+---------------+
+; Type                        ; Value         ;
++-----------------------------+---------------+
+; Simulation Start Time       ; 0 ps          ;
+; Simulation End Time         ; 10.0 ms       ;
+; Simulation Netlist Size     ; 179 nodes     ;
+; Simulation Coverage         ;      66.01 %  ;
+; Total Number of Transitions ; 170847        ;
+; Simulation Breakpoints      ; 0             ;
+; Family                      ; MAX II        ;
+; Device                      ; EPM1270T144C5 ;
++-----------------------------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      66.01 % ;
+; Total nodes checked                                 ; 179          ;
+; Total output ports checked                          ; 203          ;
+; Total output ports with complete 1/0-value coverage ; 134          ;
+; Total output ports with no 1/0-value coverage       ; 68           ;
+; Total output ports with no 1-value coverage         ; 68           ;
+; Total output ports with no 0-value coverage         ; 69           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                              ;
++------------------------+------------------------------+------------------+
+; Node Name              ; Output Port Name             ; Output Port Type ;
++------------------------+------------------------------+------------------+
+; |servoX|pinout         ; |servoX|Pulse~0              ; combout          ;
+; |servoX|flag_full~reg0 ; |servoX|flag_full~reg0       ; regout           ;
+; |servoX|LessThan1~0    ; |servoX|LessThan1~0          ; combout          ;
+; |servoX|Add0~0         ; |servoX|Add0~0               ; combout          ;
+; |servoX|Add0~0         ; |servoX|Add0~2               ; cout0            ;
+; |servoX|Add0~0         ; |servoX|Add0~2COUT1_50       ; cout1            ;
+; |servoX|Add0~5         ; |servoX|Add0~5               ; combout          ;
+; |servoX|Add0~5         ; |servoX|Add0~7               ; cout             ;
+; |servoX|Add0~10        ; |servoX|Add0~10              ; combout          ;
+; |servoX|Add0~10        ; |servoX|Add0~12              ; cout0            ;
+; |servoX|Add0~10        ; |servoX|Add0~12COUT1_52      ; cout1            ;
+; |servoX|Add0~15        ; |servoX|Add0~15              ; combout          ;
+; |servoX|Add0~15        ; |servoX|Add0~17COUT1_58      ; cout1            ;
+; |servoX|Equal1~0       ; |servoX|Equal1~0             ; combout          ;
+; |servoX|Add0~20        ; |servoX|Add0~20              ; combout          ;
+; |servoX|Add0~20        ; |servoX|Add0~22COUT1_56      ; cout1            ;
+; |servoX|Add0~25        ; |servoX|Add0~25              ; combout          ;
+; |servoX|Add0~25        ; |servoX|Add0~27              ; cout0            ;
+; |servoX|Add0~25        ; |servoX|Add0~27COUT1_48      ; cout1            ;
+; |servoX|Add0~30        ; |servoX|Add0~30              ; combout          ;
+; |servoX|Add0~30        ; |servoX|Add0~32              ; cout0            ;
+; |servoX|Add0~30        ; |servoX|Add0~32COUT1_54      ; cout1            ;
+; |servoX|Add0~35        ; |servoX|Add0~35              ; combout          ;
+; |servoX|Equal0~0       ; |servoX|Equal0~0             ; combout          ;
+; |servoX|Equal1~1       ; |servoX|Equal1~1             ; combout          ;
+; |servoX|Equal0~1       ; |servoX|Equal0~1             ; combout          ;
+; |servoX|countT[2]      ; |servoX|countT[2]            ; regout           ;
+; |servoX|countT[1]      ; |servoX|countT[1]            ; regout           ;
+; |servoX|Equal2~0       ; |servoX|Equal2~0             ; combout          ;
+; |servoX|Dir~0          ; |servoX|Dir~0                ; combout          ;
+; |servoX|countWR[1]     ; |servoX|countWR[1]           ; regout           ;
+; |servoX|LessThan0~0    ; |servoX|LessThan0~0          ; combout          ;
+; |servoX|countWR[2]     ; |servoX|countWR[2]           ; regout           ;
+; |servoX|countWR~0      ; |servoX|countWR~0            ; combout          ;
+; |servoX|Add5~0         ; |servoX|Add5~0               ; combout          ;
+; |servoX|countWR~1      ; |servoX|countWR~1            ; combout          ;
+; |servoX|preWR          ; |servoX|always0~0            ; combout          ;
+; |servoX|preflag_T      ; |servoX|preflag_T            ; regout           ;
+; |servoX|always0~1      ; |servoX|always0~1            ; combout          ;
+; |servoX|count_clk1[1]  ; |servoX|count_clk1[1]        ; regout           ;
+; |servoX|count_clk1[4]  ; |servoX|count_clk1[4]        ; regout           ;
+; |servoX|count_clk1[2]  ; |servoX|count_clk1[2]        ; regout           ;
+; |servoX|count_clk1[6]  ; |servoX|count_clk1[6]        ; regout           ;
+; |servoX|count_clk1[5]  ; |servoX|count_clk1[5]        ; regout           ;
+; |servoX|count_clk1[0]  ; |servoX|count_clk1[0]        ; regout           ;
+; |servoX|count_clk1[3]  ; |servoX|count_clk1[3]        ; regout           ;
+; |servoX|countWR~4      ; |servoX|countWR~4            ; combout          ;
+; |servoX|BUFF3~0        ; |servoX|BUFF3~0              ; combout          ;
+; |servoX|countWR~5      ; |servoX|countWR~5            ; combout          ;
+; |servoX|BUFF1~0        ; |servoX|BUFF1~0              ; combout          ;
+; |servoX|BUFF2~0        ; |servoX|BUFF2~0              ; combout          ;
+; |servoX|Add4~0         ; |servoX|Add4~0               ; combout          ;
+; |servoX|LessThan1~17   ; |servoX|LessThan1~17         ; cout             ;
+; |servoX|BUFF3~1        ; |servoX|BUFF3~1              ; combout          ;
+; |servoX|Add4~6         ; |servoX|Add4~6               ; combout          ;
+; |servoX|Nx_temp[1]~2   ; |servoX|Nx_temp[1]~2         ; combout          ;
+; |servoX|Add3~15        ; |servoX|Add3~15              ; combout          ;
+; |servoX|LessThan1~22   ; |servoX|LessThan1~22         ; cout0            ;
+; |servoX|LessThan1~22   ; |servoX|LessThan1~22COUT1_54 ; cout1            ;
+; |servoX|BUFF4~0        ; |servoX|BUFF4~0              ; combout          ;
+; |servoX|BUFF4~1        ; |servoX|BUFF4~1              ; combout          ;
+; |servoX|BUFF4~2        ; |servoX|BUFF4~2              ; combout          ;
+; |servoX|Add4~12        ; |servoX|Add4~12              ; combout          ;
+; |servoX|Add3~20        ; |servoX|Add3~20              ; combout          ;
+; |servoX|Add3~20        ; |servoX|Add3~22              ; cout0            ;
+; |servoX|Add3~20        ; |servoX|Add3~22COUT1_54      ; cout1            ;
+; |servoX|LessThan1~27   ; |servoX|LessThan1~27         ; cout0            ;
+; |servoX|LessThan1~27   ; |servoX|LessThan1~27COUT1_52 ; cout1            ;
+; |servoX|Add4~18        ; |servoX|Add4~18              ; combout          ;
+; |servoX|Add4~18        ; |servoX|Add4~20              ; cout             ;
+; |servoX|BUFF1[3]       ; |servoX|BUFF1[3]             ; regout           ;
+; |servoX|Nx_temp~7      ; |servoX|Nx_temp~7            ; combout          ;
+; |servoX|acc[3]         ; |servoX|acc[3]               ; regout           ;
+; |servoX|Add3~25        ; |servoX|Add3~25              ; combout          ;
+; |servoX|Add3~25        ; |servoX|Add3~27              ; cout0            ;
+; |servoX|Add3~25        ; |servoX|Add3~27COUT1_52      ; cout1            ;
+; |servoX|LessThan1~32   ; |servoX|LessThan1~32         ; cout0            ;
+; |servoX|LessThan1~32   ; |servoX|LessThan1~32COUT1_50 ; cout1            ;
+; |servoX|Add4~24        ; |servoX|Add4~24              ; combout          ;
+; |servoX|Add4~24        ; |servoX|Add4~26              ; cout0            ;
+; |servoX|Add4~24        ; |servoX|Add4~26COUT1_62      ; cout1            ;
+; |servoX|BUFF2[3]       ; |servoX|BUFF2[3]             ; regout           ;
+; |servoX|BUFF1~9        ; |servoX|BUFF1~9              ; combout          ;
+; |servoX|BUFF1[2]       ; |servoX|BUFF1[2]             ; regout           ;
+; |servoX|Nx_temp~9      ; |servoX|Nx_temp~9            ; combout          ;
+; |servoX|acc[2]         ; |servoX|acc[2]               ; regout           ;
+; |servoX|Add3~30        ; |servoX|Add3~30              ; combout          ;
+; |servoX|Add3~30        ; |servoX|Add3~32              ; cout0            ;
+; |servoX|Add3~30        ; |servoX|Add3~32COUT1_50      ; cout1            ;
+; |servoX|LessThan1~37   ; |servoX|LessThan1~37         ; cout0            ;
+; |servoX|LessThan1~37   ; |servoX|LessThan1~37COUT1_48 ; cout1            ;
+; |servoX|Add4~30        ; |servoX|Add4~30              ; combout          ;
+; |servoX|Add4~30        ; |servoX|Add4~32              ; cout0            ;
+; |servoX|Add4~30        ; |servoX|Add4~32COUT1_60      ; cout1            ;
+; |servoX|BUFF3[3]       ; |servoX|BUFF3[3]             ; regout           ;
+; |servoX|BUFF2~9        ; |servoX|BUFF2~9              ; combout          ;
+; |servoX|BUFF2[2]       ; |servoX|BUFF2[2]             ; regout           ;
+; |servoX|BUFF1~11       ; |servoX|BUFF1~11             ; combout          ;
+; |servoX|BUFF1[1]       ; |servoX|BUFF1[1]             ; regout           ;
+; |servoX|Nx_temp~11     ; |servoX|Nx_temp~11           ; combout          ;
+; |servoX|acc[1]         ; |servoX|acc[1]               ; regout           ;
+; |servoX|Add3~35        ; |servoX|Add3~35              ; combout          ;
+; |servoX|Add3~35        ; |servoX|Add3~37              ; cout0            ;
+; |servoX|Add3~35        ; |servoX|Add3~37COUT1_48      ; cout1            ;
+; |servoX|Add4~36        ; |servoX|Add4~36              ; combout          ;
+; |servoX|Add4~36        ; |servoX|Add4~38              ; cout0            ;
+; |servoX|Add4~36        ; |servoX|Add4~38COUT1_58      ; cout1            ;
+; |servoX|BUFF3~10       ; |servoX|BUFF3~10             ; combout          ;
+; |servoX|BUFF3[2]       ; |servoX|BUFF3[2]             ; regout           ;
+; |servoX|BUFF2~11       ; |servoX|BUFF2~11             ; combout          ;
+; |servoX|BUFF2[1]       ; |servoX|BUFF2[1]             ; regout           ;
+; |servoX|BUFF1~13       ; |servoX|BUFF1~13             ; combout          ;
+; |servoX|BUFF1[0]       ; |servoX|BUFF1[0]             ; regout           ;
+; |servoX|Nx_temp~13     ; |servoX|Nx_temp~13           ; combout          ;
+; |servoX|acc[0]         ; |servoX|acc[0]               ; regout           ;
+; |servoX|Add4~42        ; |servoX|Add4~42              ; combout          ;
+; |servoX|BUFF3~12       ; |servoX|BUFF3~12             ; combout          ;
+; |servoX|BUFF3[1]       ; |servoX|BUFF3[1]             ; regout           ;
+; |servoX|BUFF2~13       ; |servoX|BUFF2~13             ; combout          ;
+; |servoX|BUFF2[0]       ; |servoX|BUFF2[0]             ; regout           ;
+; |servoX|BUFF1~15       ; |servoX|BUFF1~15             ; combout          ;
+; |servoX|BUFF3~14       ; |servoX|BUFF3~14             ; combout          ;
+; |servoX|BUFF3[0]       ; |servoX|BUFF3[0]             ; regout           ;
+; |servoX|BUFF2~15       ; |servoX|BUFF2~15             ; combout          ;
+; |servoX|BUFF3~16       ; |servoX|BUFF3~16             ; combout          ;
+; |servoX|clk            ; |servoX|clk~corein           ; combout          ;
+; |servoX|WR             ; |servoX|WR~corein            ; combout          ;
+; |servoX|Nx[7]          ; |servoX|Nx[7]~corein         ; combout          ;
+; |servoX|Nx[2]          ; |servoX|Nx[2]~corein         ; combout          ;
+; |servoX|Nx[1]          ; |servoX|Nx[1]~corein         ; combout          ;
+; |servoX|Nx[0]          ; |servoX|Nx[0]~corein         ; combout          ;
+; |servoX|Pulse          ; |servoX|Pulse                ; padio            ;
+; |servoX|flag_T         ; |servoX|flag_T               ; padio            ;
+; |servoX|flag_full      ; |servoX|flag_full            ; padio            ;
++------------------------+------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                ;
++-----------------------+------------------------------+------------------+
+; Node Name             ; Output Port Name             ; Output Port Type ;
++-----------------------+------------------------------+------------------+
+; |servoX|Add0~15       ; |servoX|Add0~17              ; cout0            ;
+; |servoX|Add0~20       ; |servoX|Add0~22              ; cout0            ;
+; |servoX|BUFF1[7]      ; |servoX|BUFF1[7]             ; regout           ;
+; |servoX|countWR[3]    ; |servoX|countWR[3]           ; regout           ;
+; |servoX|countWR~2     ; |servoX|countWR~2            ; combout          ;
+; |servoX|countWR~3     ; |servoX|countWR~3            ; combout          ;
+; |servoX|Add3~0        ; |servoX|Add3~0               ; combout          ;
+; |servoX|LessThan1~7   ; |servoX|LessThan1~7          ; cout0            ;
+; |servoX|LessThan1~7   ; |servoX|LessThan1~7COUT1_58  ; cout1            ;
+; |servoX|count_clk1[7] ; |servoX|count_clk1[7]        ; regout           ;
+; |servoX|BUFF2[7]      ; |servoX|BUFF2[7]             ; regout           ;
+; |servoX|BUFF1~1       ; |servoX|BUFF1~1              ; combout          ;
+; |servoX|acc[7]        ; |servoX|acc[7]               ; regout           ;
+; |servoX|Add3~5        ; |servoX|Add3~5               ; combout          ;
+; |servoX|Add3~5        ; |servoX|Add3~7               ; cout0            ;
+; |servoX|Add3~5        ; |servoX|Add3~7COUT1_58       ; cout1            ;
+; |servoX|LessThan1~12  ; |servoX|LessThan1~12         ; cout0            ;
+; |servoX|LessThan1~12  ; |servoX|LessThan1~12COUT1_56 ; cout1            ;
+; |servoX|BUFF3[7]      ; |servoX|BUFF3[7]             ; regout           ;
+; |servoX|BUFF2~1       ; |servoX|BUFF2~1              ; combout          ;
+; |servoX|BUFF1[6]      ; |servoX|BUFF1[6]             ; regout           ;
+; |servoX|Nx_temp~0     ; |servoX|Nx_temp~0            ; combout          ;
+; |servoX|acc[6]        ; |servoX|acc[6]               ; regout           ;
+; |servoX|Add3~10       ; |servoX|Add3~10              ; combout          ;
+; |servoX|Add3~10       ; |servoX|Add3~12              ; cout0            ;
+; |servoX|Add3~10       ; |servoX|Add3~12COUT1_56      ; cout1            ;
+; |servoX|BUFF3~2       ; |servoX|BUFF3~2              ; combout          ;
+; |servoX|Add4~6        ; |servoX|Add4~8               ; cout0            ;
+; |servoX|Add4~6        ; |servoX|Add4~8COUT1_66       ; cout1            ;
+; |servoX|BUFF2[6]      ; |servoX|BUFF2[6]             ; regout           ;
+; |servoX|BUFF1~3       ; |servoX|BUFF1~3              ; combout          ;
+; |servoX|BUFF1[5]      ; |servoX|BUFF1[5]             ; regout           ;
+; |servoX|Nx_temp~3     ; |servoX|Nx_temp~3            ; combout          ;
+; |servoX|acc[5]        ; |servoX|acc[5]               ; regout           ;
+; |servoX|Add3~15       ; |servoX|Add3~17              ; cout             ;
+; |servoX|Add4~12       ; |servoX|Add4~14              ; cout0            ;
+; |servoX|Add4~12       ; |servoX|Add4~14COUT1_64      ; cout1            ;
+; |servoX|BUFF3[6]      ; |servoX|BUFF3[6]             ; regout           ;
+; |servoX|BUFF2~3       ; |servoX|BUFF2~3              ; combout          ;
+; |servoX|BUFF2[5]      ; |servoX|BUFF2[5]             ; regout           ;
+; |servoX|BUFF1~5       ; |servoX|BUFF1~5              ; combout          ;
+; |servoX|BUFF1[4]      ; |servoX|BUFF1[4]             ; regout           ;
+; |servoX|Nx_temp~5     ; |servoX|Nx_temp~5            ; combout          ;
+; |servoX|acc[4]        ; |servoX|acc[4]               ; regout           ;
+; |servoX|BUFF3~4       ; |servoX|BUFF3~4              ; combout          ;
+; |servoX|BUFF3[5]      ; |servoX|BUFF3[5]             ; regout           ;
+; |servoX|BUFF2~5       ; |servoX|BUFF2~5              ; combout          ;
+; |servoX|BUFF2[4]      ; |servoX|BUFF2[4]             ; regout           ;
+; |servoX|BUFF1~7       ; |servoX|BUFF1~7              ; combout          ;
+; |servoX|BUFF3~6       ; |servoX|BUFF3~6              ; combout          ;
+; |servoX|BUFF3[4]      ; |servoX|BUFF3[4]             ; regout           ;
+; |servoX|BUFF2~7       ; |servoX|BUFF2~7              ; combout          ;
+; |servoX|BUFF3~8       ; |servoX|BUFF3~8              ; combout          ;
+; |servoX|Add4~42       ; |servoX|Add4~44              ; cout0            ;
+; |servoX|Add4~42       ; |servoX|Add4~44COUT1_56      ; cout1            ;
+; |servoX|LS            ; |servoX|LS~corein            ; combout          ;
+; |servoX|N[7]          ; |servoX|N[7]~corein          ; combout          ;
+; |servoX|N[6]          ; |servoX|N[6]~corein          ; combout          ;
+; |servoX|N[5]          ; |servoX|N[5]~corein          ; combout          ;
+; |servoX|Nx[6]         ; |servoX|Nx[6]~corein         ; combout          ;
+; |servoX|N[4]          ; |servoX|N[4]~corein          ; combout          ;
+; |servoX|Nx[5]         ; |servoX|Nx[5]~corein         ; combout          ;
+; |servoX|N[3]          ; |servoX|N[3]~corein          ; combout          ;
+; |servoX|Nx[4]         ; |servoX|Nx[4]~corein         ; combout          ;
+; |servoX|N[2]          ; |servoX|N[2]~corein          ; combout          ;
+; |servoX|N[1]          ; |servoX|N[1]~corein          ; combout          ;
+; |servoX|N[0]          ; |servoX|N[0]~corein          ; combout          ;
+; |servoX|Dir           ; |servoX|Dir                  ; padio            ;
++-----------------------+------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                ;
++-----------------------+------------------------------+------------------+
+; Node Name             ; Output Port Name             ; Output Port Type ;
++-----------------------+------------------------------+------------------+
+; |servoX|Add0~15       ; |servoX|Add0~17              ; cout0            ;
+; |servoX|Add0~20       ; |servoX|Add0~22              ; cout0            ;
+; |servoX|BUFF1[7]      ; |servoX|BUFF1[7]             ; regout           ;
+; |servoX|countWR[3]    ; |servoX|countWR[3]           ; regout           ;
+; |servoX|countWR~2     ; |servoX|countWR~2            ; combout          ;
+; |servoX|countWR~3     ; |servoX|countWR~3            ; combout          ;
+; |servoX|Add3~0        ; |servoX|Add3~0               ; combout          ;
+; |servoX|LessThan1~7   ; |servoX|LessThan1~7          ; cout0            ;
+; |servoX|LessThan1~7   ; |servoX|LessThan1~7COUT1_58  ; cout1            ;
+; |servoX|count_clk1[7] ; |servoX|count_clk1[7]        ; regout           ;
+; |servoX|BUFF2[7]      ; |servoX|BUFF2[7]             ; regout           ;
+; |servoX|BUFF1~1       ; |servoX|BUFF1~1              ; combout          ;
+; |servoX|acc[7]        ; |servoX|acc[7]               ; regout           ;
+; |servoX|Add3~5        ; |servoX|Add3~5               ; combout          ;
+; |servoX|Add3~5        ; |servoX|Add3~7               ; cout0            ;
+; |servoX|Add3~5        ; |servoX|Add3~7COUT1_58       ; cout1            ;
+; |servoX|LessThan1~12  ; |servoX|LessThan1~12         ; cout0            ;
+; |servoX|LessThan1~12  ; |servoX|LessThan1~12COUT1_56 ; cout1            ;
+; |servoX|BUFF3[7]      ; |servoX|BUFF3[7]             ; regout           ;
+; |servoX|BUFF2~1       ; |servoX|BUFF2~1              ; combout          ;
+; |servoX|BUFF1[6]      ; |servoX|BUFF1[6]             ; regout           ;
+; |servoX|Nx_temp~0     ; |servoX|Nx_temp~0            ; combout          ;
+; |servoX|acc[6]        ; |servoX|acc[6]               ; regout           ;
+; |servoX|Add3~10       ; |servoX|Add3~10              ; combout          ;
+; |servoX|Add3~10       ; |servoX|Add3~12              ; cout0            ;
+; |servoX|Add3~10       ; |servoX|Add3~12COUT1_56      ; cout1            ;
+; |servoX|BUFF3~2       ; |servoX|BUFF3~2              ; combout          ;
+; |servoX|Add4~6        ; |servoX|Add4~8               ; cout0            ;
+; |servoX|Add4~6        ; |servoX|Add4~8COUT1_66       ; cout1            ;
+; |servoX|BUFF2[6]      ; |servoX|BUFF2[6]             ; regout           ;
+; |servoX|BUFF1~3       ; |servoX|BUFF1~3              ; combout          ;
+; |servoX|BUFF1[5]      ; |servoX|BUFF1[5]             ; regout           ;
+; |servoX|Nx_temp~3     ; |servoX|Nx_temp~3            ; combout          ;
+; |servoX|acc[5]        ; |servoX|acc[5]               ; regout           ;
+; |servoX|Add3~15       ; |servoX|Add3~17              ; cout             ;
+; |servoX|Add4~12       ; |servoX|Add4~14              ; cout0            ;
+; |servoX|Add4~12       ; |servoX|Add4~14COUT1_64      ; cout1            ;
+; |servoX|BUFF3[6]      ; |servoX|BUFF3[6]             ; regout           ;
+; |servoX|BUFF2~3       ; |servoX|BUFF2~3              ; combout          ;
+; |servoX|BUFF2[5]      ; |servoX|BUFF2[5]             ; regout           ;
+; |servoX|BUFF1~5       ; |servoX|BUFF1~5              ; combout          ;
+; |servoX|BUFF1[4]      ; |servoX|BUFF1[4]             ; regout           ;
+; |servoX|Nx_temp~5     ; |servoX|Nx_temp~5            ; combout          ;
+; |servoX|acc[4]        ; |servoX|acc[4]               ; regout           ;
+; |servoX|BUFF3~4       ; |servoX|BUFF3~4              ; combout          ;
+; |servoX|BUFF3[5]      ; |servoX|BUFF3[5]             ; regout           ;
+; |servoX|BUFF2~5       ; |servoX|BUFF2~5              ; combout          ;
+; |servoX|BUFF2[4]      ; |servoX|BUFF2[4]             ; regout           ;
+; |servoX|BUFF1~7       ; |servoX|BUFF1~7              ; combout          ;
+; |servoX|BUFF3~6       ; |servoX|BUFF3~6              ; combout          ;
+; |servoX|BUFF3[4]      ; |servoX|BUFF3[4]             ; regout           ;
+; |servoX|BUFF2~7       ; |servoX|BUFF2~7              ; combout          ;
+; |servoX|BUFF3~8       ; |servoX|BUFF3~8              ; combout          ;
+; |servoX|Add4~42       ; |servoX|Add4~44              ; cout0            ;
+; |servoX|Add4~42       ; |servoX|Add4~44COUT1_56      ; cout1            ;
+; |servoX|LS            ; |servoX|LS~corein            ; combout          ;
+; |servoX|N[7]          ; |servoX|N[7]~corein          ; combout          ;
+; |servoX|N[6]          ; |servoX|N[6]~corein          ; combout          ;
+; |servoX|N[5]          ; |servoX|N[5]~corein          ; combout          ;
+; |servoX|Nx[6]         ; |servoX|Nx[6]~corein         ; combout          ;
+; |servoX|N[4]          ; |servoX|N[4]~corein          ; combout          ;
+; |servoX|Nx[5]         ; |servoX|Nx[5]~corein         ; combout          ;
+; |servoX|N[3]          ; |servoX|N[3]~corein          ; combout          ;
+; |servoX|Nx[4]         ; |servoX|Nx[4]~corein         ; combout          ;
+; |servoX|N[2]          ; |servoX|N[2]~corein          ; combout          ;
+; |servoX|Nx[3]         ; |servoX|Nx[3]~corein         ; combout          ;
+; |servoX|N[1]          ; |servoX|N[1]~corein          ; combout          ;
+; |servoX|N[0]          ; |servoX|N[0]~corein          ; combout          ;
+; |servoX|Dir           ; |servoX|Dir                  ; padio            ;
++-----------------------+------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sun Oct 30 13:30:34 2022
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off servoX -c servoX
+Info: Using vector source file "C:/Users/DELL/Desktop/Bach_Khoa/HeThongDieuKhienNhung/CNC_PulseGen_Nhom08/servoX/servoX.vwf"
+Info: Inverted registers were found during simulation
+    Info: Register: |servoX|clk1
+    Info: Register: |servoX|flag_T~reg0
+    Info: Register: |servoX|acc[3]
+    Info: Register: |servoX|acc[1]
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      66.01 %
+Info: Number of transitions in simulation is 170847
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 157 megabytes
+    Info: Processing ended: Sun Oct 30 13:30:36 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
+
+

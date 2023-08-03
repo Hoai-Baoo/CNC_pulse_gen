@@ -1,0 +1,621 @@
+Simulator report for CNC
+Sun Oct 30 14:01:14 2022
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------+
+; Simulator Summary                           ;
++-----------------------------+---------------+
+; Type                        ; Value         ;
++-----------------------------+---------------+
+; Simulation Start Time       ; 0 ps          ;
+; Simulation End Time         ; 10.0 ms       ;
+; Simulation Netlist Size     ; 295 nodes     ;
+; Simulation Coverage         ;      65.38 %  ;
+; Total Number of Transitions ; 160447        ;
+; Simulation Breakpoints      ; 0             ;
+; Family                      ; MAX II        ;
+; Device                      ; EPM1270T144C5 ;
++-----------------------------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      65.38 % ;
+; Total nodes checked                                 ; 295          ;
+; Total output ports checked                          ; 338          ;
+; Total output ports with complete 1/0-value coverage ; 221          ;
+; Total output ports with no 1/0-value coverage       ; 115          ;
+; Total output ports with no 1-value coverage         ; 117          ;
+; Total output ports with no 0-value coverage         ; 115          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-----------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                   ;
++----------------------------------+-----------------------------------------+------------------+
+; Node Name                        ; Output Port Name                        ; Output Port Type ;
++----------------------------------+-----------------------------------------+------------------+
+; |CNC|servoX:inst|pinout          ; |CNC|servoX:inst|Pulse                  ; combout          ;
+; |CNC|servoY:inst12|pinout        ; |CNC|servoY:inst12|Pulse                ; combout          ;
+; |CNC|servoY:inst12|Dir           ; |CNC|servoY:inst12|Dir                  ; regout           ;
+; |CNC|servoY:inst12|flag_full     ; |CNC|servoY:inst12|flag_full            ; regout           ;
+; |CNC|servoX:inst|LessThan1~0     ; |CNC|servoX:inst|LessThan1~0            ; combout          ;
+; |CNC|servoX:inst|Add0~0          ; |CNC|servoX:inst|Add0~0                 ; combout          ;
+; |CNC|servoX:inst|Add0~0          ; |CNC|servoX:inst|Add0~2                 ; cout0            ;
+; |CNC|servoX:inst|Add0~0          ; |CNC|servoX:inst|Add0~2COUT1_50         ; cout1            ;
+; |CNC|servoX:inst|Add0~5          ; |CNC|servoX:inst|Add0~5                 ; combout          ;
+; |CNC|servoX:inst|Add0~5          ; |CNC|servoX:inst|Add0~7                 ; cout             ;
+; |CNC|servoX:inst|Add0~10         ; |CNC|servoX:inst|Add0~10                ; combout          ;
+; |CNC|servoX:inst|Add0~10         ; |CNC|servoX:inst|Add0~12                ; cout0            ;
+; |CNC|servoX:inst|Add0~10         ; |CNC|servoX:inst|Add0~12COUT1_52        ; cout1            ;
+; |CNC|servoX:inst|Add0~15         ; |CNC|servoX:inst|Add0~15                ; combout          ;
+; |CNC|servoX:inst|Add0~15         ; |CNC|servoX:inst|Add0~17COUT1_58        ; cout1            ;
+; |CNC|servoX:inst|Equal1~0        ; |CNC|servoX:inst|Equal1~0               ; combout          ;
+; |CNC|servoX:inst|Add0~20         ; |CNC|servoX:inst|Add0~20                ; combout          ;
+; |CNC|servoX:inst|Add0~20         ; |CNC|servoX:inst|Add0~22COUT1_56        ; cout1            ;
+; |CNC|servoX:inst|Add0~25         ; |CNC|servoX:inst|Add0~25                ; combout          ;
+; |CNC|servoX:inst|Add0~25         ; |CNC|servoX:inst|Add0~27                ; cout0            ;
+; |CNC|servoX:inst|Add0~25         ; |CNC|servoX:inst|Add0~27COUT1_48        ; cout1            ;
+; |CNC|servoX:inst|Add0~30         ; |CNC|servoX:inst|Add0~30                ; combout          ;
+; |CNC|servoX:inst|Add0~30         ; |CNC|servoX:inst|Add0~32                ; cout0            ;
+; |CNC|servoX:inst|Add0~30         ; |CNC|servoX:inst|Add0~32COUT1_54        ; cout1            ;
+; |CNC|servoX:inst|Add0~35         ; |CNC|servoX:inst|Add0~35                ; combout          ;
+; |CNC|servoX:inst|Equal0~0        ; |CNC|servoX:inst|Equal0~0               ; combout          ;
+; |CNC|servoX:inst|Equal1~1        ; |CNC|servoX:inst|Equal1~1               ; combout          ;
+; |CNC|servoX:inst|Equal0~1        ; |CNC|servoX:inst|Equal0~1               ; combout          ;
+; |CNC|servoY:inst12|LessThan1~0   ; |CNC|servoY:inst12|LessThan1~0          ; combout          ;
+; |CNC|servoX:inst|BUFF1[7]        ; |CNC|servoX:inst|BUFF1[7]               ; regout           ;
+; |CNC|servoY:inst12|countT[2]     ; |CNC|servoY:inst12|countT[2]            ; regout           ;
+; |CNC|servoY:inst12|countT[1]     ; |CNC|servoY:inst12|countT[1]            ; regout           ;
+; |CNC|servoX:inst|Equal2~0        ; |CNC|servoX:inst|Equal2~0               ; combout          ;
+; |CNC|servoY:inst12|flag_T~0      ; |CNC|servoY:inst12|flag_T~0             ; combout          ;
+; |CNC|servoY:inst12|BUFF1[7]      ; |CNC|servoY:inst12|BUFF1[7]             ; regout           ;
+; |CNC|servoY:inst12|countWR[2]    ; |CNC|servoY:inst12|countWR[2]           ; regout           ;
+; |CNC|servoY:inst12|countWR[1]    ; |CNC|servoY:inst12|countWR[1]           ; regout           ;
+; |CNC|servoY:inst12|LessThan0~0   ; |CNC|servoY:inst12|LessThan0~0          ; combout          ;
+; |CNC|servoY:inst12|countWR~2     ; |CNC|servoY:inst12|countWR~2            ; combout          ;
+; |CNC|servoY:inst12|LessThan0~1   ; |CNC|servoY:inst12|LessThan0~1          ; combout          ;
+; |CNC|servoY:inst12|countWR~3     ; |CNC|servoY:inst12|countWR~3            ; combout          ;
+; |CNC|servoY:inst12|countWR~4     ; |CNC|servoY:inst12|countWR~4            ; combout          ;
+; |CNC|servoY:inst12|Add5~0        ; |CNC|servoY:inst12|Add5~0               ; combout          ;
+; |CNC|servoY:inst12|Add5~1        ; |CNC|servoY:inst12|Add5~1               ; combout          ;
+; |CNC|servoY:inst12|preWR         ; |CNC|servoY:inst12|always0~0            ; combout          ;
+; |CNC|servoY:inst12|preflag_T     ; |CNC|servoY:inst12|preflag_T            ; regout           ;
+; |CNC|servoY:inst12|always0~1     ; |CNC|servoY:inst12|always0~1            ; combout          ;
+; |CNC|servoY:inst12|countWR[3]    ; |CNC|servoY:inst12|countWR~5            ; combout          ;
+; |CNC|servoX:inst|BUFF4~0         ; |CNC|servoX:inst|BUFF4~0                ; combout          ;
+; |CNC|servoY:inst12|count_clk1[1] ; |CNC|servoY:inst12|count_clk1[1]        ; regout           ;
+; |CNC|servoY:inst12|count_clk1[4] ; |CNC|servoY:inst12|count_clk1[4]        ; regout           ;
+; |CNC|servoY:inst12|count_clk1[2] ; |CNC|servoY:inst12|count_clk1[2]        ; regout           ;
+; |CNC|servoY:inst12|count_clk1[6] ; |CNC|servoY:inst12|count_clk1[6]        ; regout           ;
+; |CNC|servoY:inst12|count_clk1[5] ; |CNC|servoY:inst12|count_clk1[5]        ; regout           ;
+; |CNC|servoY:inst12|count_clk1[0] ; |CNC|servoY:inst12|count_clk1[0]        ; regout           ;
+; |CNC|servoY:inst12|count_clk1[3] ; |CNC|servoY:inst12|count_clk1[3]        ; regout           ;
+; |CNC|servoY:inst12|countWR~6     ; |CNC|servoY:inst12|countWR~6            ; combout          ;
+; |CNC|servoX:inst|BUFF3~0         ; |CNC|servoX:inst|BUFF3~0                ; combout          ;
+; |CNC|servoY:inst12|countWR~7     ; |CNC|servoY:inst12|countWR~7            ; combout          ;
+; |CNC|servoX:inst|BUFF1~0         ; |CNC|servoX:inst|BUFF1~0                ; combout          ;
+; |CNC|servoX:inst|BUFF1~1         ; |CNC|servoX:inst|BUFF1~1                ; combout          ;
+; |CNC|servoY:inst12|BUFF2[7]      ; |CNC|servoY:inst12|BUFF2[7]             ; regout           ;
+; |CNC|servoY:inst12|BUFF1~0       ; |CNC|servoY:inst12|BUFF1~0              ; combout          ;
+; |CNC|servoX:inst|BUFF2~0         ; |CNC|servoX:inst|BUFF2~0                ; combout          ;
+; |CNC|servoY:inst12|BUFF3[7]      ; |CNC|servoY:inst12|BUFF3[7]             ; regout           ;
+; |CNC|servoY:inst12|BUFF2~0       ; |CNC|servoY:inst12|BUFF2~0              ; combout          ;
+; |CNC|servoX:inst|Add4~0          ; |CNC|servoX:inst|Add4~0                 ; combout          ;
+; |CNC|servoX:inst|LessThan1~17    ; |CNC|servoX:inst|LessThan1~17           ; cout             ;
+; |CNC|servoY:inst12|Add4~0        ; |CNC|servoY:inst12|Add4~0               ; combout          ;
+; |CNC|servoY:inst12|LessThan1~17  ; |CNC|servoY:inst12|LessThan1~17         ; cout             ;
+; |CNC|servoX:inst|BUFF3~1         ; |CNC|servoX:inst|BUFF3~1                ; combout          ;
+; |CNC|servoY:inst12|BUFF3~0       ; |CNC|servoY:inst12|BUFF3~0              ; combout          ;
+; |CNC|servoX:inst|Add4~6          ; |CNC|servoX:inst|Add4~6                 ; combout          ;
+; |CNC|servoY:inst12|Ny_temp[1]~1  ; |CNC|servoY:inst12|Ny_temp[1]~1         ; combout          ;
+; |CNC|servoX:inst|Add3~15         ; |CNC|servoX:inst|Add3~15                ; combout          ;
+; |CNC|servoX:inst|LessThan1~22    ; |CNC|servoX:inst|LessThan1~22           ; cout0            ;
+; |CNC|servoX:inst|LessThan1~22    ; |CNC|servoX:inst|LessThan1~22COUT1_54   ; cout1            ;
+; |CNC|servoY:inst12|Add4~6        ; |CNC|servoY:inst12|Add4~6               ; combout          ;
+; |CNC|servoY:inst12|Add3~15       ; |CNC|servoY:inst12|Add3~15              ; combout          ;
+; |CNC|servoY:inst12|LessThan1~22  ; |CNC|servoY:inst12|LessThan1~22         ; cout0            ;
+; |CNC|servoY:inst12|LessThan1~22  ; |CNC|servoY:inst12|LessThan1~22COUT1_54 ; cout1            ;
+; |CNC|servoX:inst|BUFF4~1         ; |CNC|servoX:inst|BUFF4~1                ; combout          ;
+; |CNC|servoX:inst|BUFF4~2         ; |CNC|servoX:inst|BUFF4~2                ; combout          ;
+; |CNC|servoX:inst|Add4~12         ; |CNC|servoX:inst|Add4~12                ; combout          ;
+; |CNC|servoX:inst|Add3~20         ; |CNC|servoX:inst|Add3~20                ; combout          ;
+; |CNC|servoX:inst|Add3~20         ; |CNC|servoX:inst|Add3~22                ; cout0            ;
+; |CNC|servoX:inst|Add3~20         ; |CNC|servoX:inst|Add3~22COUT1_54        ; cout1            ;
+; |CNC|servoX:inst|LessThan1~27    ; |CNC|servoX:inst|LessThan1~27           ; cout0            ;
+; |CNC|servoX:inst|LessThan1~27    ; |CNC|servoX:inst|LessThan1~27COUT1_52   ; cout1            ;
+; |CNC|servoY:inst12|Add4~12       ; |CNC|servoY:inst12|Add4~12              ; combout          ;
+; |CNC|servoY:inst12|Add3~20       ; |CNC|servoY:inst12|Add3~20              ; combout          ;
+; |CNC|servoY:inst12|Add3~20       ; |CNC|servoY:inst12|Add3~22              ; cout0            ;
+; |CNC|servoY:inst12|Add3~20       ; |CNC|servoY:inst12|Add3~22COUT1_54      ; cout1            ;
+; |CNC|servoY:inst12|LessThan1~27  ; |CNC|servoY:inst12|LessThan1~27         ; cout0            ;
+; |CNC|servoY:inst12|LessThan1~27  ; |CNC|servoY:inst12|LessThan1~27COUT1_52 ; cout1            ;
+; |CNC|servoX:inst|Add4~18         ; |CNC|servoX:inst|Add4~18                ; combout          ;
+; |CNC|servoX:inst|Add4~18         ; |CNC|servoX:inst|Add4~20                ; cout             ;
+; |CNC|servoX:inst|BUFF1[3]        ; |CNC|servoX:inst|BUFF1[3]               ; regout           ;
+; |CNC|servoX:inst|acc[3]          ; |CNC|servoX:inst|acc[3]                 ; regout           ;
+; |CNC|servoX:inst|Add3~25         ; |CNC|servoX:inst|Add3~25                ; combout          ;
+; |CNC|servoX:inst|Add3~25         ; |CNC|servoX:inst|Add3~27                ; cout0            ;
+; |CNC|servoX:inst|Add3~25         ; |CNC|servoX:inst|Add3~27COUT1_52        ; cout1            ;
+; |CNC|servoX:inst|LessThan1~32    ; |CNC|servoX:inst|LessThan1~32           ; cout0            ;
+; |CNC|servoX:inst|LessThan1~32    ; |CNC|servoX:inst|LessThan1~32COUT1_50   ; cout1            ;
+; |CNC|servoY:inst12|Add4~18       ; |CNC|servoY:inst12|Add4~18              ; combout          ;
+; |CNC|servoY:inst12|Add4~18       ; |CNC|servoY:inst12|Add4~20              ; cout             ;
+; |CNC|servoY:inst12|BUFF1[3]      ; |CNC|servoY:inst12|BUFF1[3]             ; regout           ;
+; |CNC|servoY:inst12|Ny_temp~7     ; |CNC|servoY:inst12|Ny_temp~7            ; combout          ;
+; |CNC|servoY:inst12|acc[3]        ; |CNC|servoY:inst12|acc[3]               ; regout           ;
+; |CNC|servoY:inst12|Add3~25       ; |CNC|servoY:inst12|Add3~25              ; combout          ;
+; |CNC|servoY:inst12|Add3~25       ; |CNC|servoY:inst12|Add3~27              ; cout0            ;
+; |CNC|servoY:inst12|Add3~25       ; |CNC|servoY:inst12|Add3~27COUT1_52      ; cout1            ;
+; |CNC|servoY:inst12|LessThan1~32  ; |CNC|servoY:inst12|LessThan1~32         ; cout0            ;
+; |CNC|servoY:inst12|LessThan1~32  ; |CNC|servoY:inst12|LessThan1~32COUT1_50 ; cout1            ;
+; |CNC|servoX:inst|Add4~24         ; |CNC|servoX:inst|Add4~24                ; combout          ;
+; |CNC|servoX:inst|Add4~24         ; |CNC|servoX:inst|Add4~26                ; cout0            ;
+; |CNC|servoX:inst|Add4~24         ; |CNC|servoX:inst|Add4~26COUT1_62        ; cout1            ;
+; |CNC|servoX:inst|BUFF1~9         ; |CNC|servoX:inst|BUFF1~9                ; combout          ;
+; |CNC|servoX:inst|BUFF1[2]        ; |CNC|servoX:inst|BUFF1[2]               ; regout           ;
+; |CNC|servoX:inst|Nx_temp~8       ; |CNC|servoX:inst|Nx_temp~8              ; combout          ;
+; |CNC|servoX:inst|acc[2]          ; |CNC|servoX:inst|acc[2]                 ; regout           ;
+; |CNC|servoX:inst|Add3~30         ; |CNC|servoX:inst|Add3~30                ; combout          ;
+; |CNC|servoX:inst|Add3~30         ; |CNC|servoX:inst|Add3~32                ; cout0            ;
+; |CNC|servoX:inst|Add3~30         ; |CNC|servoX:inst|Add3~32COUT1_50        ; cout1            ;
+; |CNC|servoX:inst|LessThan1~37    ; |CNC|servoX:inst|LessThan1~37           ; cout0            ;
+; |CNC|servoX:inst|LessThan1~37    ; |CNC|servoX:inst|LessThan1~37COUT1_48   ; cout1            ;
+; |CNC|servoY:inst12|Add4~24       ; |CNC|servoY:inst12|Add4~24              ; combout          ;
+; |CNC|servoY:inst12|Add4~24       ; |CNC|servoY:inst12|Add4~26              ; cout0            ;
+; |CNC|servoY:inst12|Add4~24       ; |CNC|servoY:inst12|Add4~26COUT1_62      ; cout1            ;
+; |CNC|servoY:inst12|BUFF2[3]      ; |CNC|servoY:inst12|BUFF2[3]             ; regout           ;
+; |CNC|servoY:inst12|BUFF1~8       ; |CNC|servoY:inst12|BUFF1~8              ; combout          ;
+; |CNC|servoY:inst12|BUFF1[2]      ; |CNC|servoY:inst12|BUFF1[2]             ; regout           ;
+; |CNC|servoY:inst12|Ny_temp~9     ; |CNC|servoY:inst12|Ny_temp~9            ; combout          ;
+; |CNC|servoY:inst12|acc[2]        ; |CNC|servoY:inst12|acc[2]               ; regout           ;
+; |CNC|servoY:inst12|Add3~30       ; |CNC|servoY:inst12|Add3~30              ; combout          ;
+; |CNC|servoY:inst12|Add3~30       ; |CNC|servoY:inst12|Add3~32              ; cout0            ;
+; |CNC|servoY:inst12|Add3~30       ; |CNC|servoY:inst12|Add3~32COUT1_50      ; cout1            ;
+; |CNC|servoY:inst12|LessThan1~37  ; |CNC|servoY:inst12|LessThan1~37         ; cout0            ;
+; |CNC|servoY:inst12|LessThan1~37  ; |CNC|servoY:inst12|LessThan1~37COUT1_48 ; cout1            ;
+; |CNC|servoX:inst|Add4~30         ; |CNC|servoX:inst|Add4~30                ; combout          ;
+; |CNC|servoX:inst|Add4~30         ; |CNC|servoX:inst|Add4~32                ; cout0            ;
+; |CNC|servoX:inst|Add4~30         ; |CNC|servoX:inst|Add4~32COUT1_60        ; cout1            ;
+; |CNC|servoX:inst|BUFF2[2]        ; |CNC|servoX:inst|BUFF2[2]               ; regout           ;
+; |CNC|servoX:inst|BUFF1~11        ; |CNC|servoX:inst|BUFF1~11               ; combout          ;
+; |CNC|servoX:inst|BUFF1[1]        ; |CNC|servoX:inst|BUFF1[1]               ; regout           ;
+; |CNC|servoX:inst|Nx_temp~10      ; |CNC|servoX:inst|Nx_temp~10             ; combout          ;
+; |CNC|servoX:inst|acc[1]          ; |CNC|servoX:inst|acc[1]                 ; regout           ;
+; |CNC|servoX:inst|Add3~35         ; |CNC|servoX:inst|Add3~35                ; combout          ;
+; |CNC|servoX:inst|Add3~35         ; |CNC|servoX:inst|Add3~37                ; cout0            ;
+; |CNC|servoX:inst|Add3~35         ; |CNC|servoX:inst|Add3~37COUT1_48        ; cout1            ;
+; |CNC|servoY:inst12|Add4~30       ; |CNC|servoY:inst12|Add4~30              ; combout          ;
+; |CNC|servoY:inst12|Add4~30       ; |CNC|servoY:inst12|Add4~32              ; cout0            ;
+; |CNC|servoY:inst12|Add4~30       ; |CNC|servoY:inst12|Add4~32COUT1_60      ; cout1            ;
+; |CNC|servoY:inst12|BUFF3[3]      ; |CNC|servoY:inst12|BUFF3[3]             ; regout           ;
+; |CNC|servoY:inst12|BUFF2~8       ; |CNC|servoY:inst12|BUFF2~8              ; combout          ;
+; |CNC|servoY:inst12|BUFF2[2]      ; |CNC|servoY:inst12|BUFF2[2]             ; regout           ;
+; |CNC|servoY:inst12|BUFF1~10      ; |CNC|servoY:inst12|BUFF1~10             ; combout          ;
+; |CNC|servoY:inst12|BUFF1[1]      ; |CNC|servoY:inst12|BUFF1[1]             ; regout           ;
+; |CNC|servoY:inst12|Ny_temp~11    ; |CNC|servoY:inst12|Ny_temp~11           ; combout          ;
+; |CNC|servoY:inst12|acc[1]        ; |CNC|servoY:inst12|acc[1]               ; regout           ;
+; |CNC|servoY:inst12|Add3~35       ; |CNC|servoY:inst12|Add3~35              ; combout          ;
+; |CNC|servoY:inst12|Add3~35       ; |CNC|servoY:inst12|Add3~37              ; cout0            ;
+; |CNC|servoY:inst12|Add3~35       ; |CNC|servoY:inst12|Add3~37COUT1_48      ; cout1            ;
+; |CNC|servoX:inst|Add4~36         ; |CNC|servoX:inst|Add4~36                ; combout          ;
+; |CNC|servoX:inst|Add4~36         ; |CNC|servoX:inst|Add4~38                ; cout0            ;
+; |CNC|servoX:inst|Add4~36         ; |CNC|servoX:inst|Add4~38COUT1_58        ; cout1            ;
+; |CNC|servoX:inst|BUFF3[2]        ; |CNC|servoX:inst|BUFF3[2]               ; regout           ;
+; |CNC|servoX:inst|BUFF2~11        ; |CNC|servoX:inst|BUFF2~11               ; combout          ;
+; |CNC|servoX:inst|BUFF2[1]        ; |CNC|servoX:inst|BUFF2[1]               ; regout           ;
+; |CNC|servoX:inst|BUFF1~13        ; |CNC|servoX:inst|BUFF1~13               ; combout          ;
+; |CNC|servoX:inst|BUFF1[0]        ; |CNC|servoX:inst|BUFF1[0]               ; regout           ;
+; |CNC|servoX:inst|Nx_temp~12      ; |CNC|servoX:inst|Nx_temp~12             ; combout          ;
+; |CNC|servoX:inst|acc[0]          ; |CNC|servoX:inst|acc[0]                 ; regout           ;
+; |CNC|servoY:inst12|Add4~36       ; |CNC|servoY:inst12|Add4~36              ; combout          ;
+; |CNC|servoY:inst12|Add4~36       ; |CNC|servoY:inst12|Add4~38              ; cout0            ;
+; |CNC|servoY:inst12|Add4~36       ; |CNC|servoY:inst12|Add4~38COUT1_58      ; cout1            ;
+; |CNC|servoY:inst12|BUFF3~8       ; |CNC|servoY:inst12|BUFF3~8              ; combout          ;
+; |CNC|servoY:inst12|BUFF3[2]      ; |CNC|servoY:inst12|BUFF3[2]             ; regout           ;
+; |CNC|servoY:inst12|BUFF2~10      ; |CNC|servoY:inst12|BUFF2~10             ; combout          ;
+; |CNC|servoY:inst12|BUFF2[1]      ; |CNC|servoY:inst12|BUFF2[1]             ; regout           ;
+; |CNC|servoY:inst12|BUFF1~12      ; |CNC|servoY:inst12|BUFF1~12             ; combout          ;
+; |CNC|servoY:inst12|BUFF1[0]      ; |CNC|servoY:inst12|BUFF1[0]             ; regout           ;
+; |CNC|servoY:inst12|Ny_temp~13    ; |CNC|servoY:inst12|Ny_temp~13           ; combout          ;
+; |CNC|servoY:inst12|acc[0]        ; |CNC|servoY:inst12|acc[0]               ; regout           ;
+; |CNC|servoX:inst|Add4~42         ; |CNC|servoX:inst|Add4~42                ; combout          ;
+; |CNC|servoX:inst|BUFF3~12        ; |CNC|servoX:inst|BUFF3~12               ; combout          ;
+; |CNC|servoX:inst|BUFF3[1]        ; |CNC|servoX:inst|BUFF3[1]               ; regout           ;
+; |CNC|servoX:inst|BUFF2~13        ; |CNC|servoX:inst|BUFF2~13               ; combout          ;
+; |CNC|servoX:inst|BUFF2[0]        ; |CNC|servoX:inst|BUFF2[0]               ; regout           ;
+; |CNC|servoX:inst|BUFF1~15        ; |CNC|servoX:inst|BUFF1~15               ; combout          ;
+; |CNC|servoY:inst12|Add4~42       ; |CNC|servoY:inst12|Add4~42              ; combout          ;
+; |CNC|servoY:inst12|BUFF3~10      ; |CNC|servoY:inst12|BUFF3~10             ; combout          ;
+; |CNC|servoY:inst12|BUFF3[1]      ; |CNC|servoY:inst12|BUFF3[1]             ; regout           ;
+; |CNC|servoY:inst12|BUFF2~12      ; |CNC|servoY:inst12|BUFF2~12             ; combout          ;
+; |CNC|servoY:inst12|BUFF2[0]      ; |CNC|servoY:inst12|BUFF2[0]             ; regout           ;
+; |CNC|servoY:inst12|BUFF1~14      ; |CNC|servoY:inst12|BUFF1~14             ; combout          ;
+; |CNC|servoX:inst|BUFF3~14        ; |CNC|servoX:inst|BUFF3~14               ; combout          ;
+; |CNC|servoX:inst|BUFF3[0]        ; |CNC|servoX:inst|BUFF3[0]               ; regout           ;
+; |CNC|servoX:inst|BUFF2~15        ; |CNC|servoX:inst|BUFF2~15               ; combout          ;
+; |CNC|servoY:inst12|BUFF3~12      ; |CNC|servoY:inst12|BUFF3~12             ; combout          ;
+; |CNC|servoY:inst12|BUFF3[0]      ; |CNC|servoY:inst12|BUFF3[0]             ; regout           ;
+; |CNC|servoY:inst12|BUFF2~14      ; |CNC|servoY:inst12|BUFF2~14             ; combout          ;
+; |CNC|servoX:inst|BUFF3~16        ; |CNC|servoX:inst|BUFF3~16               ; combout          ;
+; |CNC|servoY:inst12|BUFF3~14      ; |CNC|servoY:inst12|BUFF3~14             ; combout          ;
+; |CNC|clk                         ; |CNC|clk~corein                         ; combout          ;
+; |CNC|LS                          ; |CNC|LS~corein                          ; combout          ;
+; |CNC|WR                          ; |CNC|WR~corein                          ; combout          ;
+; |CNC|Ny[7]                       ; |CNC|Ny[7]~corein                       ; combout          ;
+; |CNC|Ny[3]                       ; |CNC|Ny[3]~corein                       ; combout          ;
+; |CNC|Nx[2]                       ; |CNC|Nx[2]~corein                       ; combout          ;
+; |CNC|Ny[2]                       ; |CNC|Ny[2]~corein                       ; combout          ;
+; |CNC|Nx[1]                       ; |CNC|Nx[1]~corein                       ; combout          ;
+; |CNC|Ny[1]                       ; |CNC|Ny[1]~corein                       ; combout          ;
+; |CNC|Nx[0]                       ; |CNC|Nx[0]~corein                       ; combout          ;
+; |CNC|Ny[0]                       ; |CNC|Ny[0]~corein                       ; combout          ;
+; |CNC|PulseX                      ; |CNC|PulseX                             ; padio            ;
+; |CNC|PulseY                      ; |CNC|PulseY                             ; padio            ;
+; |CNC|DirY                        ; |CNC|DirY                               ; padio            ;
+; |CNC|flag_T                      ; |CNC|flag_T                             ; padio            ;
+; |CNC|flag_fullX                  ; |CNC|flag_fullX                         ; padio            ;
+; |CNC|flag_fullY                  ; |CNC|flag_fullY                         ; padio            ;
++----------------------------------+-----------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-----------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                      ;
++----------------------------------+-----------------------------------------+------------------+
+; Node Name                        ; Output Port Name                        ; Output Port Type ;
++----------------------------------+-----------------------------------------+------------------+
+; |CNC|servoX:inst|Dir             ; |CNC|servoX:inst|Dir                    ; regout           ;
+; |CNC|servoX:inst|Add0~15         ; |CNC|servoX:inst|Add0~17                ; cout0            ;
+; |CNC|servoX:inst|Add0~20         ; |CNC|servoX:inst|Add0~22                ; cout0            ;
+; |CNC|servoY:inst12|countWR[3]    ; |CNC|servoY:inst12|countWR[3]           ; regout           ;
+; |CNC|servoX:inst|Add3~0          ; |CNC|servoX:inst|Add3~0                 ; combout          ;
+; |CNC|servoX:inst|LessThan1~7     ; |CNC|servoX:inst|LessThan1~7            ; cout0            ;
+; |CNC|servoX:inst|LessThan1~7     ; |CNC|servoX:inst|LessThan1~7COUT1_58    ; cout1            ;
+; |CNC|servoY:inst12|count_clk1[7] ; |CNC|servoY:inst12|count_clk1[7]        ; regout           ;
+; |CNC|servoY:inst12|Add3~0        ; |CNC|servoY:inst12|Add3~0               ; combout          ;
+; |CNC|servoY:inst12|LessThan1~7   ; |CNC|servoY:inst12|LessThan1~7          ; cout0            ;
+; |CNC|servoY:inst12|LessThan1~7   ; |CNC|servoY:inst12|LessThan1~7COUT1_58  ; cout1            ;
+; |CNC|servoX:inst|BUFF2[7]        ; |CNC|servoX:inst|BUFF2[7]               ; regout           ;
+; |CNC|servoX:inst|acc[7]          ; |CNC|servoX:inst|acc[7]                 ; regout           ;
+; |CNC|servoX:inst|Add3~5          ; |CNC|servoX:inst|Add3~5                 ; combout          ;
+; |CNC|servoX:inst|Add3~5          ; |CNC|servoX:inst|Add3~7                 ; cout0            ;
+; |CNC|servoX:inst|Add3~5          ; |CNC|servoX:inst|Add3~7COUT1_58         ; cout1            ;
+; |CNC|servoX:inst|LessThan1~12    ; |CNC|servoX:inst|LessThan1~12           ; cout0            ;
+; |CNC|servoX:inst|LessThan1~12    ; |CNC|servoX:inst|LessThan1~12COUT1_56   ; cout1            ;
+; |CNC|servoY:inst12|acc[7]        ; |CNC|servoY:inst12|acc[7]               ; regout           ;
+; |CNC|servoY:inst12|Add3~5        ; |CNC|servoY:inst12|Add3~5               ; combout          ;
+; |CNC|servoY:inst12|Add3~5        ; |CNC|servoY:inst12|Add3~7               ; cout0            ;
+; |CNC|servoY:inst12|Add3~5        ; |CNC|servoY:inst12|Add3~7COUT1_58       ; cout1            ;
+; |CNC|servoY:inst12|LessThan1~12  ; |CNC|servoY:inst12|LessThan1~12         ; cout0            ;
+; |CNC|servoY:inst12|LessThan1~12  ; |CNC|servoY:inst12|LessThan1~12COUT1_56 ; cout1            ;
+; |CNC|servoX:inst|BUFF3[7]        ; |CNC|servoX:inst|BUFF3[7]               ; regout           ;
+; |CNC|servoX:inst|BUFF2~1         ; |CNC|servoX:inst|BUFF2~1                ; combout          ;
+; |CNC|servoX:inst|BUFF1[6]        ; |CNC|servoX:inst|BUFF1[6]               ; regout           ;
+; |CNC|servoX:inst|Nx_temp~0       ; |CNC|servoX:inst|Nx_temp~0              ; combout          ;
+; |CNC|servoX:inst|acc[6]          ; |CNC|servoX:inst|acc[6]                 ; regout           ;
+; |CNC|servoX:inst|Add3~10         ; |CNC|servoX:inst|Add3~10                ; combout          ;
+; |CNC|servoX:inst|Add3~10         ; |CNC|servoX:inst|Add3~12                ; cout0            ;
+; |CNC|servoX:inst|Add3~10         ; |CNC|servoX:inst|Add3~12COUT1_56        ; cout1            ;
+; |CNC|servoY:inst12|BUFF1[6]      ; |CNC|servoY:inst12|BUFF1[6]             ; regout           ;
+; |CNC|servoY:inst12|Ny_temp~0     ; |CNC|servoY:inst12|Ny_temp~0            ; combout          ;
+; |CNC|servoY:inst12|acc[6]        ; |CNC|servoY:inst12|acc[6]               ; regout           ;
+; |CNC|servoY:inst12|Add3~10       ; |CNC|servoY:inst12|Add3~10              ; combout          ;
+; |CNC|servoY:inst12|Add3~10       ; |CNC|servoY:inst12|Add3~12              ; cout0            ;
+; |CNC|servoY:inst12|Add3~10       ; |CNC|servoY:inst12|Add3~12COUT1_56      ; cout1            ;
+; |CNC|servoX:inst|BUFF3~2         ; |CNC|servoX:inst|BUFF3~2                ; combout          ;
+; |CNC|servoX:inst|Add4~6          ; |CNC|servoX:inst|Add4~8                 ; cout0            ;
+; |CNC|servoX:inst|Add4~6          ; |CNC|servoX:inst|Add4~8COUT1_66         ; cout1            ;
+; |CNC|servoX:inst|BUFF2[6]        ; |CNC|servoX:inst|BUFF2[6]               ; regout           ;
+; |CNC|servoX:inst|BUFF1~3         ; |CNC|servoX:inst|BUFF1~3                ; combout          ;
+; |CNC|servoX:inst|BUFF1[5]        ; |CNC|servoX:inst|BUFF1[5]               ; regout           ;
+; |CNC|servoX:inst|Nx_temp~2       ; |CNC|servoX:inst|Nx_temp~2              ; combout          ;
+; |CNC|servoX:inst|acc[5]          ; |CNC|servoX:inst|acc[5]                 ; regout           ;
+; |CNC|servoX:inst|Add3~15         ; |CNC|servoX:inst|Add3~17                ; cout             ;
+; |CNC|servoY:inst12|Add4~6        ; |CNC|servoY:inst12|Add4~8               ; cout0            ;
+; |CNC|servoY:inst12|Add4~6        ; |CNC|servoY:inst12|Add4~8COUT1_66       ; cout1            ;
+; |CNC|servoY:inst12|BUFF2[6]      ; |CNC|servoY:inst12|BUFF2[6]             ; regout           ;
+; |CNC|servoY:inst12|BUFF1~2       ; |CNC|servoY:inst12|BUFF1~2              ; combout          ;
+; |CNC|servoY:inst12|BUFF1[5]      ; |CNC|servoY:inst12|BUFF1[5]             ; regout           ;
+; |CNC|servoY:inst12|Ny_temp~3     ; |CNC|servoY:inst12|Ny_temp~3            ; combout          ;
+; |CNC|servoY:inst12|acc[5]        ; |CNC|servoY:inst12|acc[5]               ; regout           ;
+; |CNC|servoY:inst12|Add3~15       ; |CNC|servoY:inst12|Add3~17              ; cout             ;
+; |CNC|servoX:inst|Add4~12         ; |CNC|servoX:inst|Add4~14                ; cout0            ;
+; |CNC|servoX:inst|Add4~12         ; |CNC|servoX:inst|Add4~14COUT1_64        ; cout1            ;
+; |CNC|servoX:inst|BUFF3[6]        ; |CNC|servoX:inst|BUFF3[6]               ; regout           ;
+; |CNC|servoX:inst|BUFF2~3         ; |CNC|servoX:inst|BUFF2~3                ; combout          ;
+; |CNC|servoX:inst|BUFF2[5]        ; |CNC|servoX:inst|BUFF2[5]               ; regout           ;
+; |CNC|servoX:inst|BUFF1~5         ; |CNC|servoX:inst|BUFF1~5                ; combout          ;
+; |CNC|servoX:inst|BUFF1[4]        ; |CNC|servoX:inst|BUFF1[4]               ; regout           ;
+; |CNC|servoX:inst|Nx_temp~4       ; |CNC|servoX:inst|Nx_temp~4              ; combout          ;
+; |CNC|servoX:inst|acc[4]          ; |CNC|servoX:inst|acc[4]                 ; regout           ;
+; |CNC|servoY:inst12|Add4~12       ; |CNC|servoY:inst12|Add4~14              ; cout0            ;
+; |CNC|servoY:inst12|Add4~12       ; |CNC|servoY:inst12|Add4~14COUT1_64      ; cout1            ;
+; |CNC|servoY:inst12|BUFF3[6]      ; |CNC|servoY:inst12|BUFF3[6]             ; regout           ;
+; |CNC|servoY:inst12|BUFF2~2       ; |CNC|servoY:inst12|BUFF2~2              ; combout          ;
+; |CNC|servoY:inst12|BUFF2[5]      ; |CNC|servoY:inst12|BUFF2[5]             ; regout           ;
+; |CNC|servoY:inst12|BUFF1~4       ; |CNC|servoY:inst12|BUFF1~4              ; combout          ;
+; |CNC|servoY:inst12|BUFF1[4]      ; |CNC|servoY:inst12|BUFF1[4]             ; regout           ;
+; |CNC|servoY:inst12|Ny_temp~5     ; |CNC|servoY:inst12|Ny_temp~5            ; combout          ;
+; |CNC|servoY:inst12|acc[4]        ; |CNC|servoY:inst12|acc[4]               ; regout           ;
+; |CNC|servoX:inst|BUFF3~4         ; |CNC|servoX:inst|BUFF3~4                ; combout          ;
+; |CNC|servoX:inst|BUFF3[5]        ; |CNC|servoX:inst|BUFF3[5]               ; regout           ;
+; |CNC|servoX:inst|BUFF2~5         ; |CNC|servoX:inst|BUFF2~5                ; combout          ;
+; |CNC|servoX:inst|BUFF2[4]        ; |CNC|servoX:inst|BUFF2[4]               ; regout           ;
+; |CNC|servoX:inst|BUFF1~7         ; |CNC|servoX:inst|BUFF1~7                ; combout          ;
+; |CNC|servoX:inst|Nx_temp~6       ; |CNC|servoX:inst|Nx_temp~6              ; combout          ;
+; |CNC|servoY:inst12|BUFF3~2       ; |CNC|servoY:inst12|BUFF3~2              ; combout          ;
+; |CNC|servoY:inst12|BUFF3[5]      ; |CNC|servoY:inst12|BUFF3[5]             ; regout           ;
+; |CNC|servoY:inst12|BUFF2~4       ; |CNC|servoY:inst12|BUFF2~4              ; combout          ;
+; |CNC|servoY:inst12|BUFF2[4]      ; |CNC|servoY:inst12|BUFF2[4]             ; regout           ;
+; |CNC|servoY:inst12|BUFF1~6       ; |CNC|servoY:inst12|BUFF1~6              ; combout          ;
+; |CNC|servoX:inst|BUFF3~6         ; |CNC|servoX:inst|BUFF3~6                ; combout          ;
+; |CNC|servoX:inst|BUFF3[4]        ; |CNC|servoX:inst|BUFF3[4]               ; regout           ;
+; |CNC|servoX:inst|BUFF2~7         ; |CNC|servoX:inst|BUFF2~7                ; combout          ;
+; |CNC|servoX:inst|BUFF2[3]        ; |CNC|servoX:inst|BUFF2[3]               ; regout           ;
+; |CNC|servoY:inst12|BUFF3~4       ; |CNC|servoY:inst12|BUFF3~4              ; combout          ;
+; |CNC|servoY:inst12|BUFF3[4]      ; |CNC|servoY:inst12|BUFF3[4]             ; regout           ;
+; |CNC|servoY:inst12|BUFF2~6       ; |CNC|servoY:inst12|BUFF2~6              ; combout          ;
+; |CNC|servoX:inst|BUFF3~8         ; |CNC|servoX:inst|BUFF3~8                ; combout          ;
+; |CNC|servoX:inst|BUFF3[3]        ; |CNC|servoX:inst|BUFF3[3]               ; regout           ;
+; |CNC|servoX:inst|BUFF2~9         ; |CNC|servoX:inst|BUFF2~9                ; combout          ;
+; |CNC|servoY:inst12|BUFF3~6       ; |CNC|servoY:inst12|BUFF3~6              ; combout          ;
+; |CNC|servoX:inst|BUFF3~10        ; |CNC|servoX:inst|BUFF3~10               ; combout          ;
+; |CNC|servoX:inst|Add4~42         ; |CNC|servoX:inst|Add4~44                ; cout0            ;
+; |CNC|servoX:inst|Add4~42         ; |CNC|servoX:inst|Add4~44COUT1_56        ; cout1            ;
+; |CNC|servoY:inst12|Add4~42       ; |CNC|servoY:inst12|Add4~44              ; cout0            ;
+; |CNC|servoY:inst12|Add4~42       ; |CNC|servoY:inst12|Add4~44COUT1_56      ; cout1            ;
+; |CNC|N[7]                        ; |CNC|N[7]~corein                        ; combout          ;
+; |CNC|Nx[7]                       ; |CNC|Nx[7]~corein                       ; combout          ;
+; |CNC|N[6]                        ; |CNC|N[6]~corein                        ; combout          ;
+; |CNC|N[5]                        ; |CNC|N[5]~corein                        ; combout          ;
+; |CNC|Nx[6]                       ; |CNC|Nx[6]~corein                       ; combout          ;
+; |CNC|N[4]                        ; |CNC|N[4]~corein                        ; combout          ;
+; |CNC|Ny[6]                       ; |CNC|Ny[6]~corein                       ; combout          ;
+; |CNC|Nx[5]                       ; |CNC|Nx[5]~corein                       ; combout          ;
+; |CNC|N[3]                        ; |CNC|N[3]~corein                        ; combout          ;
+; |CNC|Ny[5]                       ; |CNC|Ny[5]~corein                       ; combout          ;
+; |CNC|Nx[4]                       ; |CNC|Nx[4]~corein                       ; combout          ;
+; |CNC|N[2]                        ; |CNC|N[2]~corein                        ; combout          ;
+; |CNC|Ny[4]                       ; |CNC|Ny[4]~corein                       ; combout          ;
+; |CNC|Nx[3]                       ; |CNC|Nx[3]~corein                       ; combout          ;
+; |CNC|N[1]                        ; |CNC|N[1]~corein                        ; combout          ;
+; |CNC|N[0]                        ; |CNC|N[0]~corein                        ; combout          ;
+; |CNC|DirX                        ; |CNC|DirX                               ; padio            ;
++----------------------------------+-----------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-----------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                      ;
++----------------------------------+-----------------------------------------+------------------+
+; Node Name                        ; Output Port Name                        ; Output Port Type ;
++----------------------------------+-----------------------------------------+------------------+
+; |CNC|servoX:inst|Dir             ; |CNC|servoX:inst|Dir                    ; regout           ;
+; |CNC|servoX:inst|Add0~15         ; |CNC|servoX:inst|Add0~17                ; cout0            ;
+; |CNC|servoX:inst|Add0~20         ; |CNC|servoX:inst|Add0~22                ; cout0            ;
+; |CNC|servoY:inst12|countWR[3]    ; |CNC|servoY:inst12|countWR[3]           ; regout           ;
+; |CNC|servoX:inst|Add3~0          ; |CNC|servoX:inst|Add3~0                 ; combout          ;
+; |CNC|servoX:inst|LessThan1~7     ; |CNC|servoX:inst|LessThan1~7            ; cout0            ;
+; |CNC|servoX:inst|LessThan1~7     ; |CNC|servoX:inst|LessThan1~7COUT1_58    ; cout1            ;
+; |CNC|servoY:inst12|count_clk1[7] ; |CNC|servoY:inst12|count_clk1[7]        ; regout           ;
+; |CNC|servoY:inst12|Add3~0        ; |CNC|servoY:inst12|Add3~0               ; combout          ;
+; |CNC|servoY:inst12|LessThan1~7   ; |CNC|servoY:inst12|LessThan1~7          ; cout0            ;
+; |CNC|servoY:inst12|LessThan1~7   ; |CNC|servoY:inst12|LessThan1~7COUT1_58  ; cout1            ;
+; |CNC|servoX:inst|BUFF2[7]        ; |CNC|servoX:inst|BUFF2[7]               ; regout           ;
+; |CNC|servoX:inst|acc[7]          ; |CNC|servoX:inst|acc[7]                 ; regout           ;
+; |CNC|servoX:inst|Add3~5          ; |CNC|servoX:inst|Add3~5                 ; combout          ;
+; |CNC|servoX:inst|Add3~5          ; |CNC|servoX:inst|Add3~7                 ; cout0            ;
+; |CNC|servoX:inst|Add3~5          ; |CNC|servoX:inst|Add3~7COUT1_58         ; cout1            ;
+; |CNC|servoX:inst|LessThan1~12    ; |CNC|servoX:inst|LessThan1~12           ; cout0            ;
+; |CNC|servoX:inst|LessThan1~12    ; |CNC|servoX:inst|LessThan1~12COUT1_56   ; cout1            ;
+; |CNC|servoY:inst12|acc[7]        ; |CNC|servoY:inst12|acc[7]               ; regout           ;
+; |CNC|servoY:inst12|Add3~5        ; |CNC|servoY:inst12|Add3~5               ; combout          ;
+; |CNC|servoY:inst12|Add3~5        ; |CNC|servoY:inst12|Add3~7               ; cout0            ;
+; |CNC|servoY:inst12|Add3~5        ; |CNC|servoY:inst12|Add3~7COUT1_58       ; cout1            ;
+; |CNC|servoY:inst12|LessThan1~12  ; |CNC|servoY:inst12|LessThan1~12         ; cout0            ;
+; |CNC|servoY:inst12|LessThan1~12  ; |CNC|servoY:inst12|LessThan1~12COUT1_56 ; cout1            ;
+; |CNC|servoX:inst|BUFF3[7]        ; |CNC|servoX:inst|BUFF3[7]               ; regout           ;
+; |CNC|servoX:inst|BUFF2~1         ; |CNC|servoX:inst|BUFF2~1                ; combout          ;
+; |CNC|servoX:inst|BUFF1[6]        ; |CNC|servoX:inst|BUFF1[6]               ; regout           ;
+; |CNC|servoX:inst|Nx_temp~0       ; |CNC|servoX:inst|Nx_temp~0              ; combout          ;
+; |CNC|servoX:inst|acc[6]          ; |CNC|servoX:inst|acc[6]                 ; regout           ;
+; |CNC|servoX:inst|Add3~10         ; |CNC|servoX:inst|Add3~10                ; combout          ;
+; |CNC|servoX:inst|Add3~10         ; |CNC|servoX:inst|Add3~12                ; cout0            ;
+; |CNC|servoX:inst|Add3~10         ; |CNC|servoX:inst|Add3~12COUT1_56        ; cout1            ;
+; |CNC|servoY:inst12|BUFF1[6]      ; |CNC|servoY:inst12|BUFF1[6]             ; regout           ;
+; |CNC|servoY:inst12|Ny_temp~0     ; |CNC|servoY:inst12|Ny_temp~0            ; combout          ;
+; |CNC|servoY:inst12|acc[6]        ; |CNC|servoY:inst12|acc[6]               ; regout           ;
+; |CNC|servoY:inst12|Add3~10       ; |CNC|servoY:inst12|Add3~10              ; combout          ;
+; |CNC|servoY:inst12|Add3~10       ; |CNC|servoY:inst12|Add3~12              ; cout0            ;
+; |CNC|servoY:inst12|Add3~10       ; |CNC|servoY:inst12|Add3~12COUT1_56      ; cout1            ;
+; |CNC|servoX:inst|BUFF3~2         ; |CNC|servoX:inst|BUFF3~2                ; combout          ;
+; |CNC|servoX:inst|Add4~6          ; |CNC|servoX:inst|Add4~8                 ; cout0            ;
+; |CNC|servoX:inst|Add4~6          ; |CNC|servoX:inst|Add4~8COUT1_66         ; cout1            ;
+; |CNC|servoX:inst|BUFF2[6]        ; |CNC|servoX:inst|BUFF2[6]               ; regout           ;
+; |CNC|servoX:inst|BUFF1~3         ; |CNC|servoX:inst|BUFF1~3                ; combout          ;
+; |CNC|servoX:inst|BUFF1[5]        ; |CNC|servoX:inst|BUFF1[5]               ; regout           ;
+; |CNC|servoX:inst|Nx_temp~2       ; |CNC|servoX:inst|Nx_temp~2              ; combout          ;
+; |CNC|servoX:inst|acc[5]          ; |CNC|servoX:inst|acc[5]                 ; regout           ;
+; |CNC|servoX:inst|Add3~15         ; |CNC|servoX:inst|Add3~17                ; cout             ;
+; |CNC|servoY:inst12|Add4~6        ; |CNC|servoY:inst12|Add4~8               ; cout0            ;
+; |CNC|servoY:inst12|Add4~6        ; |CNC|servoY:inst12|Add4~8COUT1_66       ; cout1            ;
+; |CNC|servoY:inst12|BUFF2[6]      ; |CNC|servoY:inst12|BUFF2[6]             ; regout           ;
+; |CNC|servoY:inst12|BUFF1~2       ; |CNC|servoY:inst12|BUFF1~2              ; combout          ;
+; |CNC|servoY:inst12|BUFF1[5]      ; |CNC|servoY:inst12|BUFF1[5]             ; regout           ;
+; |CNC|servoY:inst12|Ny_temp~3     ; |CNC|servoY:inst12|Ny_temp~3            ; combout          ;
+; |CNC|servoY:inst12|acc[5]        ; |CNC|servoY:inst12|acc[5]               ; regout           ;
+; |CNC|servoY:inst12|Add3~15       ; |CNC|servoY:inst12|Add3~17              ; cout             ;
+; |CNC|servoX:inst|Add4~12         ; |CNC|servoX:inst|Add4~14                ; cout0            ;
+; |CNC|servoX:inst|Add4~12         ; |CNC|servoX:inst|Add4~14COUT1_64        ; cout1            ;
+; |CNC|servoX:inst|BUFF3[6]        ; |CNC|servoX:inst|BUFF3[6]               ; regout           ;
+; |CNC|servoX:inst|BUFF2~3         ; |CNC|servoX:inst|BUFF2~3                ; combout          ;
+; |CNC|servoX:inst|BUFF2[5]        ; |CNC|servoX:inst|BUFF2[5]               ; regout           ;
+; |CNC|servoX:inst|BUFF1~5         ; |CNC|servoX:inst|BUFF1~5                ; combout          ;
+; |CNC|servoX:inst|BUFF1[4]        ; |CNC|servoX:inst|BUFF1[4]               ; regout           ;
+; |CNC|servoX:inst|Nx_temp~4       ; |CNC|servoX:inst|Nx_temp~4              ; combout          ;
+; |CNC|servoX:inst|acc[4]          ; |CNC|servoX:inst|acc[4]                 ; regout           ;
+; |CNC|servoY:inst12|Add4~12       ; |CNC|servoY:inst12|Add4~14              ; cout0            ;
+; |CNC|servoY:inst12|Add4~12       ; |CNC|servoY:inst12|Add4~14COUT1_64      ; cout1            ;
+; |CNC|servoY:inst12|BUFF3[6]      ; |CNC|servoY:inst12|BUFF3[6]             ; regout           ;
+; |CNC|servoY:inst12|BUFF2~2       ; |CNC|servoY:inst12|BUFF2~2              ; combout          ;
+; |CNC|servoY:inst12|BUFF2[5]      ; |CNC|servoY:inst12|BUFF2[5]             ; regout           ;
+; |CNC|servoY:inst12|BUFF1~4       ; |CNC|servoY:inst12|BUFF1~4              ; combout          ;
+; |CNC|servoY:inst12|BUFF1[4]      ; |CNC|servoY:inst12|BUFF1[4]             ; regout           ;
+; |CNC|servoY:inst12|Ny_temp~5     ; |CNC|servoY:inst12|Ny_temp~5            ; combout          ;
+; |CNC|servoY:inst12|acc[4]        ; |CNC|servoY:inst12|acc[4]               ; regout           ;
+; |CNC|servoX:inst|BUFF3~4         ; |CNC|servoX:inst|BUFF3~4                ; combout          ;
+; |CNC|servoX:inst|BUFF3[5]        ; |CNC|servoX:inst|BUFF3[5]               ; regout           ;
+; |CNC|servoX:inst|BUFF2~5         ; |CNC|servoX:inst|BUFF2~5                ; combout          ;
+; |CNC|servoX:inst|BUFF2[4]        ; |CNC|servoX:inst|BUFF2[4]               ; regout           ;
+; |CNC|servoX:inst|BUFF1~7         ; |CNC|servoX:inst|BUFF1~7                ; combout          ;
+; |CNC|servoX:inst|Nx_temp~6       ; |CNC|servoX:inst|Nx_temp~6              ; combout          ;
+; |CNC|servoY:inst12|BUFF3~2       ; |CNC|servoY:inst12|BUFF3~2              ; combout          ;
+; |CNC|servoY:inst12|BUFF3[5]      ; |CNC|servoY:inst12|BUFF3[5]             ; regout           ;
+; |CNC|servoY:inst12|BUFF2~4       ; |CNC|servoY:inst12|BUFF2~4              ; combout          ;
+; |CNC|servoY:inst12|BUFF2[4]      ; |CNC|servoY:inst12|BUFF2[4]             ; regout           ;
+; |CNC|servoY:inst12|BUFF1~6       ; |CNC|servoY:inst12|BUFF1~6              ; combout          ;
+; |CNC|servoX:inst|BUFF3~6         ; |CNC|servoX:inst|BUFF3~6                ; combout          ;
+; |CNC|servoX:inst|BUFF3[4]        ; |CNC|servoX:inst|BUFF3[4]               ; regout           ;
+; |CNC|servoX:inst|BUFF2~7         ; |CNC|servoX:inst|BUFF2~7                ; combout          ;
+; |CNC|servoX:inst|BUFF2[3]        ; |CNC|servoX:inst|BUFF2[3]               ; regout           ;
+; |CNC|servoY:inst12|BUFF3~4       ; |CNC|servoY:inst12|BUFF3~4              ; combout          ;
+; |CNC|servoY:inst12|BUFF3[4]      ; |CNC|servoY:inst12|BUFF3[4]             ; regout           ;
+; |CNC|servoY:inst12|BUFF2~6       ; |CNC|servoY:inst12|BUFF2~6              ; combout          ;
+; |CNC|servoX:inst|BUFF3~8         ; |CNC|servoX:inst|BUFF3~8                ; combout          ;
+; |CNC|servoX:inst|BUFF3[3]        ; |CNC|servoX:inst|BUFF3[3]               ; regout           ;
+; |CNC|servoX:inst|BUFF2~9         ; |CNC|servoX:inst|BUFF2~9                ; combout          ;
+; |CNC|servoY:inst12|BUFF3~6       ; |CNC|servoY:inst12|BUFF3~6              ; combout          ;
+; |CNC|servoX:inst|BUFF3~10        ; |CNC|servoX:inst|BUFF3~10               ; combout          ;
+; |CNC|servoX:inst|Add4~42         ; |CNC|servoX:inst|Add4~44                ; cout0            ;
+; |CNC|servoX:inst|Add4~42         ; |CNC|servoX:inst|Add4~44COUT1_56        ; cout1            ;
+; |CNC|servoY:inst12|Add4~42       ; |CNC|servoY:inst12|Add4~44              ; cout0            ;
+; |CNC|servoY:inst12|Add4~42       ; |CNC|servoY:inst12|Add4~44COUT1_56      ; cout1            ;
+; |CNC|N[7]                        ; |CNC|N[7]~corein                        ; combout          ;
+; |CNC|N[6]                        ; |CNC|N[6]~corein                        ; combout          ;
+; |CNC|N[5]                        ; |CNC|N[5]~corein                        ; combout          ;
+; |CNC|Nx[6]                       ; |CNC|Nx[6]~corein                       ; combout          ;
+; |CNC|N[4]                        ; |CNC|N[4]~corein                        ; combout          ;
+; |CNC|Ny[6]                       ; |CNC|Ny[6]~corein                       ; combout          ;
+; |CNC|Nx[5]                       ; |CNC|Nx[5]~corein                       ; combout          ;
+; |CNC|N[3]                        ; |CNC|N[3]~corein                        ; combout          ;
+; |CNC|Ny[5]                       ; |CNC|Ny[5]~corein                       ; combout          ;
+; |CNC|Nx[4]                       ; |CNC|Nx[4]~corein                       ; combout          ;
+; |CNC|N[2]                        ; |CNC|N[2]~corein                        ; combout          ;
+; |CNC|Ny[4]                       ; |CNC|Ny[4]~corein                       ; combout          ;
+; |CNC|N[1]                        ; |CNC|N[1]~corein                        ; combout          ;
+; |CNC|N[0]                        ; |CNC|N[0]~corein                        ; combout          ;
+; |CNC|DirX                        ; |CNC|DirX                               ; padio            ;
++----------------------------------+-----------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sun Oct 30 14:01:12 2022
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off CNC -c CNC
+Info: Using vector source file "C:/Users/DELL/Desktop/Bach_Khoa/HeThongDieuKhienNhung/CNC_PulseGen_Nhom08/CNC/CNC.vwf"
+Info: Inverted registers were found during simulation
+    Info: Register: |CNC|servoY:inst12|clk1
+    Info: Register: |CNC|servoY:inst12|flag_T
+    Info: Register: |CNC|servoX:inst|acc[3]
+    Info: Register: |CNC|servoY:inst12|acc[3]
+    Info: Register: |CNC|servoX:inst|acc[1]
+    Info: Register: |CNC|servoY:inst12|acc[1]
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      65.38 %
+Info: Number of transitions in simulation is 160447
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 158 megabytes
+    Info: Processing ended: Sun Oct 30 14:01:14 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
+
+

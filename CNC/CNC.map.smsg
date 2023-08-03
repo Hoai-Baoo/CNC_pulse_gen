@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at servox.v(18): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at servoy.v(19): always construct contains both blocking and non-blocking assignments
