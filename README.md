@@ -49,7 +49,7 @@ We need to write a program in HDL language (Quartus II) to control 2 servo drive
 # Algorithm
 ![Figure 7 - Line interpolation algorithm according to standard pulse method.](https://github.com/Hoai-Baoo/CNC_pulse_gen/assets/93426264/7db444da-e394-49d7-917e-6904735fdb7b)
 
-*Figure 7 - Line interpolation algorithm according to standard pulse method (This algorithm is supported by Ph.D. Nguyen Vinh Hao).*
+*Figure 7 - Line interpolation algorithm according to standard pulse method (This algorithm is supported by Ph.D. Nguyen Vinh Hao - lecturer of this course).*
 
 # Simulation results for 1 servo
 
