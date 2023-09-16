@@ -31,6 +31,9 @@ We need to write a program in HDL language (Quartus II) to control 2 servo drive
 
 *Figure 5 - Example.*
 
+![image](https://github.com/Hoai-Baoo/CNC_pulse_gen/assets/93426264/cf0c048f-8480-45ed-a680-ae923c9e6ae2)
+
+
 **Requests:**
 1. Write for 2 axes X,Y
 2. When there is a rising edge of WR, Nx loads a new value. But this value does not affect the current T cycle, but the next T cycle.
